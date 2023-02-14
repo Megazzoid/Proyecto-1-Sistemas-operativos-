@@ -44,18 +44,22 @@ public class Productores_GOT extends Thread{
             if(i == Main.productor){
                 for(int j = 0; j < 2; j++){
                     System.out.println(j);
-                    try {
-                        this.semaforoIntro.acquire(2);
-                        Main.semaforoMutao.acquire();
-                        Main.numero--;
-                        System.out.println(Main.numero);
-                        Thread.sleep(1000);
-                        Main.semaforoMutao.release();
-                        j--;
+                    if(semaforoIntro.availablePermits() > 0){
+                        try {
+                            semaforoIntro.acquire(2);
+                            Main.semaforoMutao.acquire();
+                            Main.numero--;
+                            System.out.println(Main.numero);
+                            Thread.sleep(1000);
+                            Main.semaforoMutao.release();
+                            j--;
+                            semaforoIntro.release(3);
+                            } catch (InterruptedException ex) {
+                                Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
+                            }
                         
-                    } catch (InterruptedException ex) {
-                       Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
-                     }
+                    }
+
                 }
                 
             }
