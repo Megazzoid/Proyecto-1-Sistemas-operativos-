@@ -34,21 +34,40 @@ public class Main {
     public static boolean check = true;
     public static int productor = 1;
     public static String inicio = "0";
+    
+    // el semaforo de rick y morty
+    
+    Semaphore espacioEnDriveRickyMorty = new Semaphore(150);
+    
+    // Crea los productores de rick y morty
+    
                     
     public static void main(String[] args) {
-        
+
         hilo1 = new Productores_GOT(semaforoMax, "intro");
         hilo2 = new Productores_GOT(semaforoMax, "Creditos");
         hilo3 = new Productores_GOT(semaforoMax, "Inicio");
         hilo4 = new Productores_GOT(semaforoMax, "cierre");
         hilo5 = new Productores_GOT(semaforoMax, "giro chido");
         
+        //Productor_RickyMorty intro = new Productor_RickyMorty("intro", 5, 30, 1, semaphore);
+        //Productor_RickyMorty creditos = new Productor_RickyMorty("créditos", 3, 25, 4, semaphore);
+        //Productor_RickyMorty inicio = new Productor_RickyMorty("inicio", 7, 50, 1, semaphore);
+        //Productor_RickyMorty cierre = new Productor_RickyMorty("cierre", 7.5, 55, 1, semaphore);
+        //Productor_RickyMorty plotTwist = new Productor_RickyMorty("plot twist", 10, 40, 1, semaphore);
+
         hilo1.start();
         hilo2.start();
         //hilo3.start();
         //hilo4.start();
         //hilo5.start();
-  
+        
     }
-    
+
 }
+
+
+        
+
+
+       

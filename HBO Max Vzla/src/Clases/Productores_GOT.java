@@ -45,8 +45,7 @@ public class Productores_GOT extends Thread{
                             Main.numero--;
                             System.out.println(Main.numero);
                             Thread.sleep(1000);
-                            j--;
-                            semaforoLimite.release(1);
+                            semaforoLimite.acquire(1);
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -67,8 +66,7 @@ public class Productores_GOT extends Thread{
                             Main.numero2--;
                             System.out.println(Main.numero2);
                             Thread.sleep(1000);
-                            f--;
-                            semaforoLimite.release(1);
+                            semaforoLimite.acquire(1);
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             }
