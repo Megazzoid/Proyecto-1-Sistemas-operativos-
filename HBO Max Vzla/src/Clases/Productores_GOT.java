@@ -21,24 +21,29 @@ public class Productores_GOT extends Thread{
     public Semaphore semaforoCierra;
     public Semaphore semaforoGiro;
     public Semaphore semaforoLimite;
-    public String text;
     public Boolean keep = true;
-    public int valor = 0;
+    int num_prod;
+    
+    
     
     
     
     public Productores_GOT(Semaphore semaforoMax, String texto){
         
         this.semaforoLimite = semaforoMax;
-        this.text = texto;
         
+        
+    }
+    
+    public void Productores(int productores){
+        this.num_prod = productores;
     }
 
     public void producirIntro(){
-        System.out.println("Esto es intro");
-        for(int i = 0; i < 4; i++){
-            if(i == Main.productor){
-                for(int j = 0; j < 2; j++){
+        for(int i = 0; i <= num_prod; i++){
+            System.out.println(i);
+            if(i == num_prod){
+                for(int j = 0; j <= num_prod; j++){
                     if(Main.semaforoIntro.availablePermits() > 0){
                         try {
                             Main.semaforoIntro.acquire(1);
@@ -57,9 +62,9 @@ public class Productores_GOT extends Thread{
     
     public void producirCredits(){
         System.out.println("Esto es creditos");
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 2; i++){
             if(i == Main.productor){
-                for(int f = 0; f < 2; f++){
+                for(int f = 0; f < 1; f++){
                     if(Main.semaforoCredits.availablePermits() > 0){
                         try {
                             Main.semaforoCredits.acquire(1);
@@ -76,21 +81,45 @@ public class Productores_GOT extends Thread{
         }
     }
     
+        public void producirInicio(){
+        System.out.println("Esto es inicio");
+        for(int i = 0; i < 3; i++){
+            if(i == Main.productor){
+                for(int f = 0; f < 2; f++){
+                    if(Main.semaforoCredits.availablePermits() > 0){
+                        try {
+                            Main.semaforoInicio.acquire(1);
+                            Main.numero2--;
+                            System.out.println(Main.numero2);
+                            Thread.sleep(1000);
+                            semaforoLimite.acquire(1);
+                            } catch (InterruptedException ex) {
+                                Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                    }
+                }
+            }
+        }
+    }
+    
     @Override
    public void run(){
        while(true){
-           try {
+           for(int i = 0; i <= num_prod; i++){
+               try {
                 Thread.sleep(1000);
                 producirIntro();
-                producirCredits();
+                //producirCredits();
+                //producirInicio();
            } catch (InterruptedException ex) {
                Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
            }
            
-       }
+        }
 
-       
-   }
+        }
+               
+    }
 }
  
 
