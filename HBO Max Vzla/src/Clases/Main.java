@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  */
 public class Main {
     
-    public static Semaphore semaforoMax = new Semaphore(30);
+    public static Semaphore semaforoMax = new Semaphore(200);
     public static Semaphore semaforoIntro = new Semaphore(30);
     public static Semaphore semaforoCredits = new Semaphore(25);
     public static Semaphore semaforoInicio = new Semaphore(50);
@@ -31,8 +31,11 @@ public class Main {
     
     public static volatile int numero = 30;
     public static volatile int numero2 = 25;
+    public static volatile int numero3 = 50;
+    public static volatile int numero4 = 55;
+    public static volatile int numero5 = 40;
     public static boolean check = true;
-    public static int productor = 1;
+    public static int productor = 2;
     public static String inicio = "0";
     
     // el semaforo de rick y morty
@@ -50,6 +53,12 @@ public class Main {
         hilo4 = new Productores_GOT(semaforoMax, "cierre");
         hilo5 = new Productores_GOT(semaforoMax, "giro chido");
         
+        hilo1.Productores(3);
+        hilo2.Productores2(2);
+        hilo3.Productores3(1);
+        hilo4.Productores4(2);
+        hilo5.Productores5(2);
+        
         //Productor_RickyMorty intro = new Productor_RickyMorty("intro", 5, 30, 1, semaphore);
         //Productor_RickyMorty creditos = new Productor_RickyMorty("créditos", 3, 25, 4, semaphore);
         //Productor_RickyMorty inicio = new Productor_RickyMorty("inicio", 7, 50, 1, semaphore);
@@ -58,9 +67,9 @@ public class Main {
 
         hilo1.start();
         hilo2.start();
-        //hilo3.start();
-        //hilo4.start();
-        //hilo5.start();
+        hilo3.start();
+        hilo4.start();
+        hilo5.start();
         
     }
 
