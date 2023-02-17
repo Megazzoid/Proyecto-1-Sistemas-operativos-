@@ -21,13 +21,13 @@ public class Main {
     public static Semaphore semaforoInicio = new Semaphore(50);
     public static Semaphore semaforoCierra = new Semaphore(55);
     public static Semaphore semaforoGiro = new Semaphore(40);
-    public static Semaphore semaforoMutao = new Semaphore(1);
     
     public static Productores_GOT hilo1;
     public static Productores_GOT hilo2;
     public static Productores_GOT hilo3;
     public static Productores_GOT hilo4;
     public static Productores_GOT hilo5;
+    public static Productores_GOT hilo6;
     
     public static volatile int numero = 30;
     public static volatile int numero2 = 25;
@@ -36,7 +36,6 @@ public class Main {
     public static volatile int numero5 = 40;
     public static boolean check = true;
     public static int productor = 2;
-    public static String inicio = "0";
     
     // el semaforo de rick y morty
     
@@ -52,12 +51,14 @@ public class Main {
         hilo3 = new Productores_GOT(semaforoMax, "Inicio");
         hilo4 = new Productores_GOT(semaforoMax, "cierre");
         hilo5 = new Productores_GOT(semaforoMax, "giro chido");
+        hilo6 = new Productores_GOT(semaforoMax, "giro chido");
         
         hilo1.Productores(3);
         hilo2.Productores2(2);
         hilo3.Productores3(1);
         hilo4.Productores4(2);
         hilo5.Productores5(2);
+        hilo6.ProductoresEnsambladores(2);
         
         //Productor_RickyMorty intro = new Productor_RickyMorty("intro", 5, 30, 1, semaphore);
         //Productor_RickyMorty creditos = new Productor_RickyMorty("créditos", 3, 25, 4, semaphore);
@@ -70,6 +71,7 @@ public class Main {
         hilo3.start();
         hilo4.start();
         hilo5.start();
+        hilo6.start();
         
     }
 
