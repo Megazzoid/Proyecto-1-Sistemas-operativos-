@@ -14,7 +14,7 @@ import java.util.concurrent.Semaphore;
 public class Productores_RickyMorty extends Thread {
     Semaphore espacioEnDrive;
     String tipoProductor;
-    int Acumulado;
+    int SalarioAcumulado;
    
 
     public Productores_RickyMorty(Semaphore espacioEnDrive, String tipoProductor) {
@@ -30,6 +30,7 @@ public class Productores_RickyMorty extends Thread {
                     Thread.sleep(1000);
                             Main.semaforoIntroRickYmorty.acquire(1);
                             System.out.println("Semaforo adquirido");
+                            SalarioAcumulado = SalarioAcumulado + 120;
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
@@ -44,6 +45,7 @@ public class Productores_RickyMorty extends Thread {
                try {
                     Thread.sleep(1000);
                             Main.semaforoCreditsRickyMorty.acquire(4);
+                            SalarioAcumulado = SalarioAcumulado + 72;
                             System.out.println("Hay"+ Main.semaforoCreditsRickyMorty.availablePermits());
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -54,7 +56,36 @@ public class Productores_RickyMorty extends Thread {
     }
         
     
-      
+    public void producirInicioRyM(){
+        if (tipoProductor.equals("Inicio")) {
+        if(Main.semaforoInicioRickyMorty.availablePermits() > 1){
+               try {
+                    Thread.sleep(2000);
+                            Main.semaforoInicioRickyMorty.acquire(1);
+                            SalarioAcumulado = SalarioAcumulado + 168;
+                            System.out.println("Hay Inicio"+ Main.semaforoInicioRickyMorty.availablePermits());
+                            } catch (InterruptedException ex) {
+                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }
+                    }
+    
+        }
+    } 
+    public void producirCierreRyM(){
+        if (tipoProductor.equals("Cierre")) {
+        if(Main.semaforoCierreRickyMorty.availablePermits() > 1){
+               try {
+                    Thread.sleep(4000);
+                            Main.semaforoCierreRickyMorty.acquire(1);
+                            SalarioAcumulado = SalarioAcumulado + 180;
+                            System.out.println("Hay Cierre"+ Main.semaforoCierreRickyMorty.availablePermits());
+                            } catch (InterruptedException ex) {
+                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }
+                    }
+    
+        }
+    }  
     
     
     @Override
@@ -64,7 +95,9 @@ public class Productores_RickyMorty extends Thread {
             try {
                     Thread.sleep(1000);
                     producirIntroRyM();
-                    producirCreditosRyM();        
+                    producirCreditosRyM(); 
+                    producirInicioRyM();
+                    producirCierreRyM();
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }

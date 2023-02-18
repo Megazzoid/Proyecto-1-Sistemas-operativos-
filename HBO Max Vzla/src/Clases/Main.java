@@ -42,7 +42,7 @@ public class Main {
     public static Semaphore semaforoIntroRickYmorty = new Semaphore(30);
     public static Semaphore semaforoCreditsRickyMorty = new Semaphore(25);
     public static Semaphore semaforoInicioRickyMorty = new Semaphore(50);
-    public static Semaphore semaforoCierraRickyMorty = new Semaphore(55);
+    public static Semaphore semaforoCierreRickyMorty = new Semaphore(55);
     public static Semaphore semaforoPlotRickyMorty = new Semaphore(40);
     
     public static Productores_RickyMorty hiloRym1;
@@ -76,6 +76,10 @@ public class Main {
         hiloRym1 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Intro");
         hiloRym2 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Intro");
         hiloRym3 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Creditos");
+        hiloRym4 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
+        hiloRym5 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
+        hiloRym6 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
+        hiloRym7 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
         
         
         hilo1.start();
@@ -88,6 +92,10 @@ public class Main {
         hiloRym1.start();
         hiloRym2.start();
         hiloRym3.start();
+        hiloRym4.start();
+        hiloRym5.start();
+        hiloRym6.start();
+        hiloRym7.start();
         
         
         
