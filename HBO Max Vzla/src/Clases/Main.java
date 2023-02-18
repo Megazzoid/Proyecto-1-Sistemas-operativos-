@@ -44,6 +44,7 @@ public class Main {
     public static Semaphore semaforoInicioRickyMorty = new Semaphore(50);
     public static Semaphore semaforoCierreRickyMorty = new Semaphore(55);
     public static Semaphore semaforoPlotRickyMorty = new Semaphore(40);
+    public static Semaphore semaforoEmsamblador = new Semaphore(1);
     
     public static Productores_RickyMorty hiloRym1;
     public static Productores_RickyMorty hiloRym2;
@@ -55,6 +56,8 @@ public class Main {
     public static Productores_RickyMorty hiloRym8;
     public static Productores_RickyMorty hiloRym9;
     public static Productores_RickyMorty hiloRym10;
+    public static Emsamblador_RickMorty hiloRym11;
+    public static int capituloslistos = 0;
                     
     public static void main(String[] args) {
 
@@ -83,6 +86,8 @@ public class Main {
         hiloRym8 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
         hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
         hiloRym10 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Plot");
+        hiloRym11 = new Emsamblador_RickMorty(semaforoEmsamblador);
+       
         
         
         hilo1.start();
@@ -102,6 +107,7 @@ public class Main {
         hiloRym8.start();
         hiloRym9.start();
         hiloRym10.start();
+        hiloRym11.start();
         
         
         
