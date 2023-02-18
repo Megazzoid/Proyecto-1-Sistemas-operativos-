@@ -7,38 +7,74 @@ package Clases;
 
 
 
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.concurrent.Semaphore;
 
 public class Productores_RickyMorty extends Thread {
-    private final Semaphore espacioEnDrive;
-    private final String tipoProductor;
-    private final double costoHora;
-    private final int cantidad;
-    private final int limiteEspacioDrive;
+    Semaphore espacioEnDrive;
+    String tipoProductor;
+    int Acumulado;
+   
 
-    public Productores_RickyMorty(Semaphore espacioEnDrive, String tipoProductor, double costoHora, int cantidad, int limiteEspacioDrive) {
+    public Productores_RickyMorty(Semaphore espacioEnDrive, String tipoProductor) {
         this.espacioEnDrive = espacioEnDrive;
         this.tipoProductor = tipoProductor;
-        this.costoHora = costoHora;
-        this.cantidad = cantidad;
-        this.limiteEspacioDrive = limiteEspacioDrive;
+        
     }
-
-    @Override
-    public void run() {
-        try {
-            System.out.println(tipoProductor + " comienza su trabajo.");
-            espacioEnDrive.acquire(limiteEspacioDrive);
-
-            System.out.println(tipoProductor + " está produciendo " + cantidad + " partes de capítulo.");
-            Thread.sleep(5000);
-
-            System.out.println(tipoProductor + " ha terminado su trabajo.");
-            espacioEnDrive.release(limiteEspacioDrive);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    
+    public void producirIntroRyM(){
+        if (tipoProductor.equals("Intro")) {
+        if(Main.semaforoIntroRickYmorty.availablePermits() > 0){
+               try {
+                    Thread.sleep(1000);
+                            Main.semaforoIntroRickYmorty.acquire(1);
+                            System.out.println("Semaforo adquirido");
+                            } catch (InterruptedException ex) {
+                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }
+                    }
+    
+    }
+    }
+    
+    public void producirCreditosRyM(){
+        if (tipoProductor.equals("Creditos")) {
+        if(Main.semaforoCreditsRickyMorty.availablePermits() > 4){
+               try {
+                    Thread.sleep(1000);
+                            Main.semaforoCreditsRickyMorty.acquire(4);
+                            System.out.println("Hay"+ Main.semaforoCreditsRickyMorty.availablePermits());
+                            } catch (InterruptedException ex) {
+                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }
+                    }
+    
         }
     }
+        
+    
+      
+    
+    
+    @Override
+    public void run() {
+        while(true){
+            
+            try {
+                    Thread.sleep(1000);
+                    producirIntroRyM();
+                    producirCreditosRyM();        
+                            } catch (InterruptedException ex) {
+                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }
+                    }
+           
+        
+        }
+    }
+    
+
 
     
-}
+

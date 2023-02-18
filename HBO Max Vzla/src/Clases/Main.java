@@ -39,10 +39,22 @@ public class Main {
     
     // el semaforo de rick y morty
     
-    Semaphore espacioEnDriveRickyMorty = new Semaphore(150);
+    public static Semaphore semaforoIntroRickYmorty = new Semaphore(30);
+    public static Semaphore semaforoCreditsRickyMorty = new Semaphore(25);
+    public static Semaphore semaforoInicioRickyMorty = new Semaphore(50);
+    public static Semaphore semaforoCierraRickyMorty = new Semaphore(55);
+    public static Semaphore semaforoPlotRickyMorty = new Semaphore(40);
     
-    // Crea los productores de rick y morty
-    
+    public static Productores_RickyMorty hiloRym1;
+    public static Productores_RickyMorty hiloRym2;
+    public static Productores_RickyMorty hiloRym3;
+    public static Productores_RickyMorty hiloRym4;
+    public static Productores_RickyMorty hiloRym5;
+    public static Productores_RickyMorty hiloRym6;
+    public static Productores_RickyMorty hiloRym7;
+    public static Productores_RickyMorty hiloRym8;
+    public static Productores_RickyMorty hiloRym9;
+    public static Productores_RickyMorty hiloRym10;
                     
     public static void main(String[] args) {
 
@@ -60,18 +72,24 @@ public class Main {
         hilo5.Productores5(2);
         hilo6.ProductoresEnsambladores(2);
         
-        //Productor_RickyMorty intro = new Productor_RickyMorty("intro", 5, 30, 1, semaphore);
-        //Productor_RickyMorty creditos = new Productor_RickyMorty("créditos", 3, 25, 4, semaphore);
-        //Productor_RickyMorty inicio = new Productor_RickyMorty("inicio", 7, 50, 1, semaphore);
-        //Productor_RickyMorty cierre = new Productor_RickyMorty("cierre", 7.5, 55, 1, semaphore);
-        //Productor_RickyMorty plotTwist = new Productor_RickyMorty("plot twist", 10, 40, 1, semaphore);
-
+        
+        hiloRym1 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Intro");
+        hiloRym2 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Intro");
+        hiloRym3 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Creditos");
+        
+        
         hilo1.start();
         hilo2.start();
         hilo3.start();
         hilo4.start();
         hilo5.start();
         hilo6.start();
+        
+        hiloRym1.start();
+        hiloRym2.start();
+        hiloRym3.start();
+        
+        
         
     }
 
