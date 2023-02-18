@@ -57,7 +57,8 @@ public class Main {
     public static Productores_RickyMorty hiloRym9;
     public static Productores_RickyMorty hiloRym10;
     public static Emsamblador_RickMorty hiloRym11;
-    public static int capituloslistos = 0;
+    public static int capituloslistosRym = 0;
+    public static int capitulosPlotRym = 0;
                     
     public static void main(String[] args) {
 

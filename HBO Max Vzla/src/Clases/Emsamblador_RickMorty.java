@@ -15,6 +15,7 @@ import java.util.logging.Logger;
  */
 public class Emsamblador_RickMorty extends Thread {
     Semaphore Emsamblador;
+    int capituloplot = 0;
   
   
     public Emsamblador_RickMorty(Semaphore SemaforoEmsamblador) {
@@ -23,7 +24,32 @@ public class Emsamblador_RickMorty extends Thread {
     }
     
     public void emsamblar(){
-        if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
+        if(capituloplot>4){
+            
+            if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
+                Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54 && Main.semaforoPlotRickyMorty.availablePermits() <= 39 ){
+            
+            try {
+                            Thread.sleep(5000);
+                            Main.semaforoInicioRickyMorty.release(2);
+                            Main.semaforoIntroRickYmorty.release(1);
+                            Main.semaforoCreditsRickyMorty.release(1);
+                            Main.semaforoCierreRickyMorty.release(1);
+                            Main.semaforoPlotRickyMorty.release(1);
+                            Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
+                            
+                            System.out.println("Se acaba de producir un capitulo plot en totales hay"+Main.capitulosPlotRym);
+                            capituloplot = 0;
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
+                        }}       
+            else{
+            System.out.println("No se pudo producir");
+        }
+            
+            
+        }else{
+            if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
                 Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54){
             
             try {
@@ -32,15 +58,15 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoIntroRickYmorty.release(1);
                             Main.semaforoCreditsRickyMorty.release(1);
                             Main.semaforoCierreRickyMorty.release(1);
-                            Main.capituloslistos = Main.capituloslistos + 1;
-                            System.out.println("Hay en total capitulos listos:"+Main.capituloslistos);
+                            Main.capituloslistosRym = Main.capituloslistosRym + 1;
+                            System.out.println("Hay en total capitulos listos:"+Main.capituloslistosRym);
+                            capituloplot = capituloplot + 1; 
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                         }
             
         }
-        else{
-            System.out.println("No se pudo producir");
+        
         }
     }
 
