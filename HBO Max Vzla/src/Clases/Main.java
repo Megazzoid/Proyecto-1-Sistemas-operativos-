@@ -80,6 +80,9 @@ public class Main {
         hiloRym5 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
         hiloRym6 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
         hiloRym7 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
+        hiloRym8 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
+        hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
+        hiloRym10 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Plot");
         
         
         hilo1.start();
@@ -96,6 +99,10 @@ public class Main {
         hiloRym5.start();
         hiloRym6.start();
         hiloRym7.start();
+        hiloRym8.start();
+        hiloRym9.start();
+        hiloRym10.start();
+        
         
         
         
