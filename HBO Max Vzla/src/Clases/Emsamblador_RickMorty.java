@@ -8,7 +8,7 @@ package Clases;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import Interfaz.NewJFrame;
 /**
  *
  * @author kevin
@@ -38,7 +38,11 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoPlotRickyMorty.release(1);
                             Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
                             
-                            System.out.println("Se acaba de producir un capitulo plot en totales hay"+Main.capitulosPlotRym);
+                            
+                           NewJFrame pantalla = new NewJFrame ();
+                           pantalla.setVisible(true);
+                           pantalla.setLocationRelativeTo(null);
+                           pantalla.setPrueba(Main.capitulosPlotRym+"Se acaba de producir un capitulo plot en totales hay");
                             capituloplot = 0;
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
