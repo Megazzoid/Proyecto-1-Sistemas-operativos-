@@ -5,6 +5,9 @@
  */
 package Interfaz;
 
+import javax.swing.JTextField;
+
+
 
 
 /**
@@ -12,14 +15,72 @@ package Interfaz;
  * @author kevin
  */
 public class NewJFrame extends javax.swing.JFrame {
+    private static NewJFrame newJFrame;
      
     /**
      * Creates new form NewJFrame
      */
     public NewJFrame() {
         initComponents();
-    }
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setAjustes();
 
+    }
+    
+    private void setAjustes(){
+        introDisponible.setEditable(false);
+        introDisponible.setHorizontalAlignment(JTextField.CENTER); 
+        InicioRyM.setEditable(false);
+        InicioRyM.setHorizontalAlignment(JTextField.CENTER); 
+        CreditosRyM.setEditable(false);
+        CreditosRyM.setHorizontalAlignment(JTextField.CENTER); 
+        FinalesRyM.setEditable(false);
+        FinalesRyM.setHorizontalAlignment(JTextField.CENTER); 
+        PlotRyM.setEditable(false);
+        PlotRyM.setHorizontalAlignment(JTextField.CENTER);
+        CapituloRyM.setEditable(false);
+        CapituloRyM.setHorizontalAlignment(JTextField.CENTER);
+        CapituloPlotRyM.setEditable(false);
+        CapituloPlotRyM.setHorizontalAlignment(JTextField.CENTER);
+    }
+    
+    public static synchronized NewJFrame getInstance(){
+        if (newJFrame ==null){
+            newJFrame =  new NewJFrame();
+        }
+        return newJFrame;
+    }
+    
+   public synchronized void getintroDisponibleRym (String info){
+       introDisponible.setText(info);
+   }
+   
+   public synchronized void getinicioDisponibleRym (String info){
+       InicioRyM.setText(info);
+       
+   }
+   public synchronized void getCreditoDisponibleRym (String info){
+       CreditosRyM.setText(info);
+         
+   }
+   
+   public synchronized void getfinalDisponibleRym (String info){
+       FinalesRyM.setText(info);
+   }
+   
+   public synchronized void getPlotDisponibleRym (String info){
+       PlotRyM.setText(info);
+   }
+   
+   public synchronized void getCapituloRyM (String info){
+       CapituloRyM.setText(info);
+   }
+   
+   public synchronized void getCapituloPlotRyM (String info){
+       CapituloPlotRyM.setText(info);
+   }
+       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,40 +90,211 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        prueba = new javax.swing.JTextField();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        introDisponible = new javax.swing.JTextField();
+        InicioRyM = new javax.swing.JTextField();
+        CreditosRyM = new javax.swing.JTextField();
+        FinalesRyM = new javax.swing.JTextField();
+        PlotRyM = new javax.swing.JTextField();
+        CapituloRyM = new javax.swing.JTextField();
+        CapituloPlotRyM = new javax.swing.JTextField();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        prueba.setText("jTextField1");
-        prueba.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setText("INTROS DISPONIBLES");
+
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel2.setText("RICKY &  MORTY");
+
+        jLabel3.setText("INICIOS DISPONIBLES");
+
+        jLabel4.setText("CRÉDITOS");
+
+        jLabel5.setText("FINALES PRODUCIDOS ");
+
+        jLabel6.setText("PLOT TWIST PRODUCIDOS");
+
+        jLabel7.setText("CAPÍTULOS PRODUCIDOS");
+
+        jLabel8.setText("CAP. PLOT TWIST PRODUCIDOS");
+
+        jLabel9.setText("DÍAS QUE PARA ENTREGA");
+
+        jLabel10.setText("GASTO MENSUAL");
+
+        introDisponible.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        introDisponible.setText("0");
+        introDisponible.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pruebaActionPerformed(evt);
+                introDisponibleActionPerformed(evt);
             }
         });
+
+        InicioRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        InicioRyM.setText("0");
+
+        CreditosRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        CreditosRyM.setText("0");
+
+        FinalesRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        FinalesRyM.setText("0");
+
+        PlotRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        PlotRyM.setText("0");
+        PlotRyM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlotRyMActionPerformed(evt);
+            }
+        });
+
+        CapituloRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        CapituloRyM.setText("0");
+
+        CapituloPlotRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        CapituloPlotRyM.setText("0");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 602, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(introDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(InicioRyM))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addComponent(jLabel4))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(CreditosRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(149, 149, 149))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(81, 81, 81)
+                        .addComponent(jLabel10)
+                        .addGap(89, 89, 89))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(FinalesRyM, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(57, 57, 57))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(CapituloRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(45, 45, 45)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PlotRyM))
+                            .addComponent(CapituloPlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(53, 53, 53))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(introDisponible)
+                    .addComponent(InicioRyM)
+                    .addComponent(CreditosRyM, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FinalesRyM, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+                    .addComponent(PlotRyM))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CapituloRyM)
+                    .addComponent(CapituloPlotRyM))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addGap(303, 303, 303))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(571, Short.MAX_VALUE)
-                .addComponent(prueba, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(102, 102, 102))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(prueba, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(392, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pruebaActionPerformed
+    private void introDisponibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_introDisponibleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pruebaActionPerformed
+    }//GEN-LAST:event_introDisponibleActionPerformed
+
+    private void PlotRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlotRyMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PlotRyMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,13 +332,29 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField prueba;
+    private javax.swing.JTextField CapituloPlotRyM;
+    private javax.swing.JTextField CapituloRyM;
+    private javax.swing.JTextField CreditosRyM;
+    private javax.swing.JTextField FinalesRyM;
+    private javax.swing.JTextField InicioRyM;
+    private javax.swing.JTextField PlotRyM;
+    private javax.swing.JTextField introDisponible;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
     /**
      * @param prueba the prueba to set
      */
-    public void setPrueba(String pruebita) {
-        this.prueba.setText(pruebita);
-    }
+    
 }

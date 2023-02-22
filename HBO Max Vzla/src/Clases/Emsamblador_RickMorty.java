@@ -16,6 +16,7 @@ import Interfaz.NewJFrame;
 public class Emsamblador_RickMorty extends Thread {
     Semaphore Emsamblador;
     int capituloplot = 0;
+    private NewJFrame newJFrame = NewJFrame.getInstance();
   
   
     public Emsamblador_RickMorty(Semaphore SemaforoEmsamblador) {
@@ -37,13 +38,7 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoCierreRickyMorty.release(1);
                             Main.semaforoPlotRickyMorty.release(1);
                             Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
-                            
-                            
-                           NewJFrame pantalla = new NewJFrame ();
-                           pantalla.setVisible(true);
-                           pantalla.setLocationRelativeTo(null);
-                           pantalla.setPrueba(Main.capitulosPlotRym+"Se acaba de producir un capitulo plot en totales hay");
-                            capituloplot = 0;
+                            newJFrame.getCapituloPlotRyM(Integer.toString(Main.capitulosPlotRym));
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                         }}       
@@ -63,8 +58,8 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoCreditsRickyMorty.release(1);
                             Main.semaforoCierreRickyMorty.release(1);
                             Main.capituloslistosRym = Main.capituloslistosRym + 1;
-                            System.out.println("Hay en total capitulos listos:"+Main.capituloslistosRym);
                             capituloplot = capituloplot + 1; 
+                            newJFrame.getCapituloRyM(Integer.toString(Main.capituloslistosRym));
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                         }

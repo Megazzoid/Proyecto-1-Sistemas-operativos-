@@ -16,6 +16,8 @@ public class Productores_RickyMorty extends Thread {
     Semaphore espacioEnDrive;
     String tipoProductor;
     int SalarioAcumulado;
+    private NewJFrame newJFrame = NewJFrame.getInstance();
+    int contador;
    
 
     public Productores_RickyMorty(Semaphore espacioEnDrive, String tipoProductor) {
@@ -30,8 +32,10 @@ public class Productores_RickyMorty extends Thread {
                try {
                     Thread.sleep(1000);
                             Main.semaforoIntroRickYmorty.acquire(1);
-                            System.out.println("Semaforo adquirido");
- 
+                            
+                            contador = 30 - Main.semaforoIntroRickYmorty.availablePermits();
+                            
+                            newJFrame.getintroDisponibleRym(Integer.toString(contador));
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
@@ -46,8 +50,12 @@ public class Productores_RickyMorty extends Thread {
                try {
                     Thread.sleep(1000);
                             Main.semaforoCreditsRickyMorty.acquire(4);
-                        
-                            System.out.println("Hay"+ Main.semaforoCreditsRickyMorty.availablePermits());
+                            
+                            contador = 25 - Main.semaforoCreditsRickyMorty.availablePermits();
+                            
+                            newJFrame.getCreditoDisponibleRym(Integer.toString(contador));
+                            
+                            
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
@@ -64,7 +72,8 @@ public class Productores_RickyMorty extends Thread {
                     Thread.sleep(2000);
                             Main.semaforoInicioRickyMorty.acquire(1);
                         
-                            System.out.println("Hay Inicio"+ Main.semaforoInicioRickyMorty.availablePermits());
+                           
+                            newJFrame.getinicioDisponibleRym(Integer.toString(50 - Main.semaforoInicioRickyMorty.availablePermits()));
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
@@ -78,8 +87,12 @@ public class Productores_RickyMorty extends Thread {
                try {
                     Thread.sleep(4000);
                             Main.semaforoCierreRickyMorty.acquire(1);
+                            
+                            contador = 55 - Main.semaforoCierreRickyMorty.availablePermits();
+                            
+                            newJFrame.getfinalDisponibleRym(Integer.toString(contador));
                       
-                            System.out.println("Hay Cierre"+ Main.semaforoCierreRickyMorty.availablePermits());
+                          
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
@@ -94,7 +107,10 @@ public class Productores_RickyMorty extends Thread {
                try {
                     Thread.sleep(2000);
                             Main.semaforoPlotRickyMorty.acquire(1);
-                            System.out.println("Hay Plot"+ Main.semaforoPlotRickyMorty.availablePermits());
+                            
+                            contador = 40 - Main.semaforoPlotRickyMorty.availablePermits();
+                            
+                            newJFrame.getPlotDisponibleRym(Integer.toString(contador));
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
