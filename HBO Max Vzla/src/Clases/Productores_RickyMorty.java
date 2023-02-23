@@ -110,12 +110,12 @@ public class Productores_RickyMorty extends Thread {
                }
            }
         }
-        else if(tipoProductor == "Emsamblador"){
+        else if(tipoProductor == "Ensamblador"){
             if (Main.CantidadProductoresEmsamblador >1){
-                Main.CantidadProductoresplot--;
+                Main.CantidadProductoresEmsamblador--;
             }
             else{
-               if(Tipo == "Emsamblador"){
+               if(Tipo == "Ensamblador"){
                   System.out.println("");
                }
                else{
@@ -139,7 +139,7 @@ public class Productores_RickyMorty extends Thread {
        }else if(tipoProductor =="Creditos"){
            Main.CantidadProductoresCreditos++;
        }
-       else if(tipoProductor =="Emsamblador"){
+       else if(tipoProductor == "Ensamblador"){
            Main.CantidadProductoresEmsamblador++;
                    
        }
@@ -149,7 +149,7 @@ public class Productores_RickyMorty extends Thread {
    }
    
    public void emsamblar(){
-       if (tipoProductor.equals("Emsamblador")) {
+       if (tipoProductor.equals("Ensamblador")) {
             if(capituloplot>4){
 
                 if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&

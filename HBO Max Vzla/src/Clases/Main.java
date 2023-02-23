@@ -65,7 +65,7 @@ public class Main {
     public static int capituloslistosRym = 0;
     public static int capitulosPlotRym = 0;
     public static int TotalDays = 30;
-    public static int remainingDays = TotalDays;
+    public static int remainingDays = 30;
     public static int GastoRyM = 0;
     public static int seriesultimolote = 0;
     public static int CantidadProductoresInicio = 3;
@@ -74,6 +74,7 @@ public class Main {
     public static int CantidadProductoresplot = 1;
     public static int CantidadProductoresIntro = 2;
     public static int CantidadProductoresEmsamblador = 1;
+    public static int diasporlote = 30;
     
                     
     public static void main(String[] args) {
@@ -101,7 +102,7 @@ public class Main {
         hiloRym6 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
         hiloRym7 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
         hiloRym8 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
-        hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Emsamblador");
+        hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Ensamblador");
         hiloRym10 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Plot");
         hiloRym12 = new ProjectManager_RickyMorty();
         hiloRym13 = new Director_RickyMorty();

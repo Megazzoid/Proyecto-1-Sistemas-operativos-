@@ -16,10 +16,7 @@ import java.util.logging.Logger;
  * @author kevin
  */
 public class Director_RickyMorty extends Thread {
-    private int minWaitTime = 30;
-    private int maxWaitTime = 90;
-    private int minVigilanceTime = 12;
-    private int maxVigilanceTime = 18;
+   
     int random = 0;
     int random2 = 0;
     int tiempo = 1000;
@@ -60,7 +57,7 @@ public class Director_RickyMorty extends Thread {
                  Main.LeerRickyMorty.release();
             }
              else{
-                 Main.remainingDays = 30;
+                 Main.remainingDays = Main.diasporlote;
                  newJFrame.DiaRyM(Integer.toString(Main.remainingDays));
                  newJFrame.SalarioMensual(Integer.toString(Main.GastoRyM));
                  

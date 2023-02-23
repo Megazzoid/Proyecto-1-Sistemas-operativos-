@@ -24,12 +24,14 @@ public class CambioProductores extends javax.swing.JFrame {
         empleado1.setText("");
         empleado2.setText("");
         empleado3.setText("");
-        empleado4.setText("");
         empleado5.setText("");
+        empleado4.setText("");
         empleado6.setText("");
         empleado7.setText("");
         empleado8.setText("");
         empleado9.setText("");
+        empleado10.setText("");
+        empleado11.setText("");
         
         
         
@@ -83,22 +85,40 @@ public class CambioProductores extends javax.swing.JFrame {
         CantidadProductoresCierre = new javax.swing.JLabel();
         empleado2 = new javax.swing.JTextField();
         empleado3 = new javax.swing.JTextField();
-        empleado = new javax.swing.JTextField();
-        empleado5 = new javax.swing.JTextField();
+        empleado10 = new javax.swing.JTextField();
         empleado4 = new javax.swing.JTextField();
+        empleado5 = new javax.swing.JTextField();
         empleado6 = new javax.swing.JTextField();
         empleado7 = new javax.swing.JTextField();
         empleado8 = new javax.swing.JTextField();
         empleado9 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         RolEmpleado1 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         RolEmpleado2 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        CantidadEnsamblador = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        empleado11 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        RolEmpleado3 = new javax.swing.JLabel();
+        RolEmpleado4 = new javax.swing.JLabel();
+        Enviar = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        RolEmpleado5 = new javax.swing.JLabel();
+        RolEmpleado6 = new javax.swing.JLabel();
+        RolEmpleado7 = new javax.swing.JLabel();
+        RolEmpleado8 = new javax.swing.JLabel();
+        RolEmpleado9 = new javax.swing.JLabel();
+        RolEmpleado10 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,7 +151,7 @@ public class CambioProductores extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Enviar");
+        jButton2.setText("Cambiar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -196,17 +216,10 @@ public class CambioProductores extends javax.swing.JFrame {
             }
         });
 
-        empleado.setText("   ");
-        empleado.addActionListener(new java.awt.event.ActionListener() {
+        empleado10.setText("   ");
+        empleado10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                empleadoActionPerformed(evt);
-            }
-        });
-
-        empleado5.setText("   ");
-        empleado5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                empleado5ActionPerformed(evt);
+                empleado10ActionPerformed(evt);
             }
         });
 
@@ -214,6 +227,13 @@ public class CambioProductores extends javax.swing.JFrame {
         empleado4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 empleado4ActionPerformed(evt);
+            }
+        });
+
+        empleado5.setText("   ");
+        empleado5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado5ActionPerformed(evt);
             }
         });
 
@@ -245,24 +265,6 @@ public class CambioProductores extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Enviar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Enviar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setText("Envar");
-
-        jButton6.setText("Enviar");
-
         RolEmpleado1.setText("Intro");
 
         jLabel18.setText("Area");
@@ -271,7 +273,107 @@ public class CambioProductores extends javax.swing.JFrame {
 
         jLabel24.setText("Cantidad de emsambladores");
 
-        jLabel25.setText("1");
+        CantidadEnsamblador.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CantidadEnsamblador.setText("1");
+
+        jLabel26.setText("Cambiar cantidad de dias por lote");
+
+        empleado11.setText("   ");
+        empleado11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado11ActionPerformed(evt);
+            }
+        });
+
+        jLabel27.setText("#El cambio se hara despues del corte actual");
+
+        jLabel28.setText("6. Emsamblador");
+
+        RolEmpleado3.setText("Creditos");
+
+        RolEmpleado4.setText("Inicio");
+
+        Enviar.setText("Cambiar");
+        Enviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnviarActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Cambiar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        RolEmpleado5.setText("Inicio");
+
+        RolEmpleado6.setText("Inicio");
+
+        RolEmpleado7.setText("Cierre");
+
+        RolEmpleado8.setText("Cierre");
+
+        RolEmpleado9.setText("Emsamblador");
+
+        RolEmpleado10.setText("Plot");
+
+        jButton4.setText("Cambiar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Cambiar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Cambiar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("Cambiar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("Cambiar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Cambiar");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Cambiar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Modificar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CantidadIntroInterfazLayout = new javax.swing.GroupLayout(CantidadIntroInterfaz);
         CantidadIntroInterfaz.setLayout(CantidadIntroInterfazLayout);
@@ -282,19 +384,47 @@ public class CambioProductores extends javax.swing.JFrame {
                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                .addGap(412, 412, 412)
-                                .addComponent(jLabel1))
-                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                .addGap(43, 43, 43)
                                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel22)
-                                    .addComponent(jLabel23)
-                                    .addComponent(jLabel19))
-                                .addGap(84, 84, 84)
-                                .addComponent(CantidadProductoresCierre)))
-                        .addGap(461, 461, 461))
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(412, 412, 412)
+                                        .addComponent(jLabel1))
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(43, 43, 43)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel20)
+                                            .addComponent(jLabel21)
+                                            .addComponent(jLabel22)
+                                            .addComponent(jLabel23)
+                                            .addComponent(jLabel19))
+                                        .addGap(70, 70, 70)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(CantidadProductoresIntro)
+                                            .addComponent(CantidadProductoresCierre))))
+                                .addGap(461, 461, 461))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CantidadProductoresInicio)
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(CantidadProductoresCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(CantidadProductoresPlot))
+                                        .addGap(163, 163, 163)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel27)
+                                            .addComponent(jLabel24)
+                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                                .addComponent(jLabel26)
+                                                .addGap(26, 26, 26)
+                                                .addComponent(empleado11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(57, 57, 57)
+                                                .addComponent(jButton11)))))
+                                .addGap(179, 179, 179)))
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jLabel11)
+                            .addComponent(RolEmpleado10)
+                            .addComponent(empleado10, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jLabel18)
@@ -316,83 +446,94 @@ public class CambioProductores extends javax.swing.JFrame {
                                             .addComponent(RolEmpleado1)
                                             .addComponent(jLabel2)))
                                     .addComponent(jLabel17)
-                                    .addComponent(empleado1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(26, 26, 26)
+                                    .addComponent(empleado1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel28))
                                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(26, 26, 26)
                                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(empleado2)
-                                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                .addGap(27, 27, 27)
-                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(empleado3)))
-                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                                .addComponent(jButton3)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jButton4)))
-                                        .addGap(33, 33, 33)
+                                            .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(empleado2)
+                                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(RolEmpleado2))
+                                        .addGap(27, 27, 27)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RolEmpleado3)
+                                            .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(empleado3))))
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addComponent(Enviar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton3)))
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
                                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                                                 .addComponent(jLabel5)
                                                 .addGap(0, 0, Short.MAX_VALUE))
                                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(empleado5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jButton5))
+                                                .addComponent(RolEmpleado4)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                        .addComponent(RolEmpleado2)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(empleado4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton4))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(empleado5))
+                            .addComponent(RolEmpleado5)
+                            .addComponent(jButton5))
+                        .addGap(72, 72, 72)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(empleado4))
-                                .addGap(88, 88, 88)
-                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
-                                        .addComponent(jLabel8))
-                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                        .addGap(35, 35, 35)
-                                        .addComponent(empleado6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(45, 45, 45)
+                                        .addComponent(jLabel7)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                                .addGap(35, 35, 35)
+                                                .addComponent(CantidadEnsamblador))
+                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                                .addGap(44, 44, 44)
+                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(empleado7, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(RolEmpleado7)
+                                                        .addComponent(jLabel8))))))
+                                    .addComponent(RolEmpleado6)
+                                    .addComponent(empleado6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                        .addComponent(jLabel9)
+                                        .addGap(45, 45, 45)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(RolEmpleado8))
                                         .addGap(61, 61, 61)
-                                        .addComponent(jLabel10))
-                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                        .addComponent(empleado7, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RolEmpleado9)
+                                            .addComponent(jLabel10)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(empleado9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jButton8)
+                                            .addComponent(empleado8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(65, 65, 65)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(empleado9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton9)))))
                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                                 .addComponent(jButton6)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CantidadProductoresPlot)
-                            .addComponent(CantidadProductoresInicio)
-                            .addComponent(CantidadProductoresIntro)
-                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                .addComponent(CantidadProductoresCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(138, 138, 138)
-                                .addComponent(jLabel24)
-                                .addGap(49, 49, 49)
-                                .addComponent(jLabel25)))
-                        .addGap(343, 343, 343)))
-                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(empleado8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel11))
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton10)))
                 .addContainerGap())
         );
         CantidadIntroInterfazLayout.setVerticalGroup(
@@ -404,7 +545,15 @@ public class CambioProductores extends javax.swing.JFrame {
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RolEmpleado1)
                     .addComponent(jLabel18)
-                    .addComponent(RolEmpleado2))
+                    .addComponent(RolEmpleado2)
+                    .addComponent(RolEmpleado3)
+                    .addComponent(RolEmpleado4)
+                    .addComponent(RolEmpleado5)
+                    .addComponent(RolEmpleado6)
+                    .addComponent(RolEmpleado7)
+                    .addComponent(RolEmpleado8)
+                    .addComponent(RolEmpleado9)
+                    .addComponent(RolEmpleado10))
                 .addGap(18, 18, 18)
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -417,63 +566,91 @@ public class CambioProductores extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11))
-                .addGap(37, 37, 37)
-                .addComponent(jLabel12)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel17)
-                .addGap(42, 42, 42)
-                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(empleado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(empleado9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(CantidadProductoresIntro))
-                .addGap(18, 18, 18)
-                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(CantidadProductoresInicio))
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CantidadProductoresCreditos, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel21)))
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel12)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel28)
+                        .addGap(22, 22, 22)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(empleado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 197, Short.MAX_VALUE)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(empleado6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(empleado4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)))
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton2)
+                            .addComponent(Enviar)
+                            .addComponent(jButton3)
+                            .addComponent(jButton4)
+                            .addComponent(jButton5)))
+                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton6)
+                            .addComponent(jButton7)
+                            .addComponent(jButton8)
+                            .addComponent(jButton9)
+                            .addComponent(jButton10))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel24)
-                            .addComponent(jLabel25))))
+                            .addComponent(CantidadEnsamblador))
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(CantidadProductoresIntro))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(CantidadProductoresInicio))))
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(CantidadProductoresCreditos, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel21))
+                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel26)
+                            .addComponent(empleado11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton11))))
                 .addGap(18, 18, 18)
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
-                            .addComponent(CantidadProductoresPlot))
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel22)
+                                .addComponent(CantidadProductoresPlot))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(jLabel27)))
                         .addGap(18, 18, 18)
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel23)
@@ -510,6 +687,7 @@ public class CambioProductores extends javax.swing.JFrame {
         String ProductorCreditos = "Creditos";
         String ProductorCierre = "Cierre";
         String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
         
             try{
             String answer = empleado1.getText();
@@ -523,6 +701,9 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
+                   
                 
             }
             else if (option == 2 ){
@@ -534,6 +715,8 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
             }
             else if (option ==3 ){
                 Main.hiloRym1.CambiarTipo(ProductorInicio);
@@ -542,6 +725,8 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
             }
             else if (option ==4 ){
                 Main.hiloRym1.CambiarTipo(ProductorCierre);
@@ -550,6 +735,8 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
             }
             else if (option == 5 ){
                 Main.hiloRym1.CambiarTipo(ProductorPlot);
@@ -558,12 +745,24 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
-            } else {
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym1.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
+                   
+            }
+            else {
                 throw new Exception ("No valido");
             }
-            
-            RolEmpleado1.setText(Main.hiloRym1.VerTipo());
-            
+  
              }catch (Exception e){
                 JOptionPane.showMessageDialog(null,"No es una opcion valida");
                 empleado1.setText("");
@@ -582,17 +781,17 @@ public class CambioProductores extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_empleado3ActionPerformed
 
-    private void empleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleadoActionPerformed
+    private void empleado10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_empleadoActionPerformed
-
-    private void empleado5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_empleado5ActionPerformed
+    }//GEN-LAST:event_empleado10ActionPerformed
 
     private void empleado4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_empleado4ActionPerformed
+
+    private void empleado5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado5ActionPerformed
 
     private void empleado6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado6ActionPerformed
         // TODO add your handling code here:
@@ -610,7 +809,11 @@ public class CambioProductores extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_empleado9ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void empleado11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado11ActionPerformed
+
+    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         // TODO add your handling code here:
         
         String ProductorIntro = "Intro";
@@ -618,6 +821,7 @@ public class CambioProductores extends javax.swing.JFrame {
         String ProductorCreditos = "Creditos";
         String ProductorCierre = "Cierre";
         String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
         
             try{
             String answer = empleado2.getText();
@@ -631,6 +835,9 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado2.setText(Main.hiloRym2.VerTipo());
+                   
                 
             }
             else if (option == 2 ){
@@ -642,6 +849,8 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado2.setText(Main.hiloRym2.VerTipo());
             }
             else if (option ==3 ){
                 Main.hiloRym2.CambiarTipo(ProductorInicio);
@@ -650,6 +859,8 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado2.setText(Main.hiloRym2.VerTipo());
             }
             else if (option ==4 ){
                 Main.hiloRym2.CambiarTipo(ProductorCierre);
@@ -658,6 +869,8 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado2.setText(Main.hiloRym2.VerTipo());
             }
             else if (option == 5 ){
                 Main.hiloRym2.CambiarTipo(ProductorPlot);
@@ -666,21 +879,758 @@ public class CambioProductores extends javax.swing.JFrame {
                    CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
                    CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
                    CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
-            } else {
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado2.setText(Main.hiloRym2.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym2.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado2.setText(Main.hiloRym2.VerTipo());
+                   
+            }
+            else {
                 throw new Exception ("No valido");
             }
-            
-            RolEmpleado2.setText(Main.hiloRym2.VerTipo());
-            
+  
              }catch (Exception e){
                 JOptionPane.showMessageDialog(null,"No es una opcion valida");
                 empleado1.setText("");
-    }
+             }
+    }//GEN-LAST:event_EnviarActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado3.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym3.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado1.setText(Main.hiloRym1.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym3.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado3.setText(Main.hiloRym3.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym3.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado3.setText(Main.hiloRym3.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym3.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado3.setText(Main.hiloRym3.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym3.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado3.setText(Main.hiloRym3.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym3.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado3.setText(Main.hiloRym3.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado3.setText("");
+             }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado4.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym4.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado4.setText(Main.hiloRym4.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym4.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado4.setText(Main.hiloRym4.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym4.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado4.setText(Main.hiloRym4.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym4.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado4.setText(Main.hiloRym4.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym4.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado4.setText(Main.hiloRym4.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym4.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado4.setText(Main.hiloRym4.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado4.setText("");
+             }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado5.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym5.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado5.setText(Main.hiloRym5.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym5.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado5.setText(Main.hiloRym5.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym5.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado5.setText(Main.hiloRym5.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym5.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado5.setText(Main.hiloRym5.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym5.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado5.setText(Main.hiloRym5.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym5.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado5.setText(Main.hiloRym5.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado5.setText("");
+             }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado6.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym6.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado6.setText(Main.hiloRym6.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym6.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado6.setText(Main.hiloRym6.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym6.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado6.setText(Main.hiloRym6.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym6.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado6.setText(Main.hiloRym6.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym6.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado6.setText(Main.hiloRym6.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym6.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado6.setText(Main.hiloRym6.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado6.setText("");
+    }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        
+         String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado7.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym7.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado7.setText(Main.hiloRym7.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym7.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado7.setText(Main.hiloRym7.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym7.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado7.setText(Main.hiloRym7.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym7.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado7.setText(Main.hiloRym7.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym7.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado7.setText(Main.hiloRym7.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym7.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado7.setText(Main.hiloRym7.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado7.setText("");
+    }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado8.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym8.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado8.setText(Main.hiloRym8.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym8.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado8.setText(Main.hiloRym8.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym8.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado8.setText(Main.hiloRym8.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym8.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado8.setText(Main.hiloRym8.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym8.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado8.setText(Main.hiloRym8.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym8.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado8.setText(Main.hiloRym8.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado8.setText("");
+    }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado9.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym9.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado9.setText(Main.hiloRym9.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym9.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado9.setText(Main.hiloRym9.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym9.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado9.setText(Main.hiloRym9.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym9.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado9.setText(Main.hiloRym9.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym9.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado9.setText(Main.hiloRym9.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym9.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado9.setText(Main.hiloRym9.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado9.setText("");
+    }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        String Ensambaldor = "Ensamblador";
+        
+            try{
+            String answer = empleado10.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym10.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado10.setText(Main.hiloRym10.VerTipo());
+                   
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym10.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado10.setText(Main.hiloRym10.VerTipo());
+            }
+            else if (option ==3 ){
+                Main.hiloRym10.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado10.setText(Main.hiloRym10.VerTipo());
+            }
+            else if (option ==4 ){
+                Main.hiloRym10.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado10.setText(Main.hiloRym10.VerTipo());
+            }
+            else if (option == 5 ){
+                Main.hiloRym10.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado10.setText(Main.hiloRym10.VerTipo());
+            }
+            else if (option == 6 ){
+                Main.hiloRym10.CambiarTipo(Ensambaldor);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                   CantidadEnsamblador.setText(Integer.toString(Main.CantidadProductoresEmsamblador));
+                   RolEmpleado10.setText(Main.hiloRym10.VerTipo());
+                   
+            }
+            else {
+                throw new Exception ("No valido");
+            }
+  
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado10.setText("");
+    }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        
+        try{
+        String answer = empleado11.getText();
+        int option = Integer.parseInt(answer);
+        Main.diasporlote = option;
+        
+        }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado10.setText("");
+    }
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -718,16 +1668,27 @@ public class CambioProductores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CantidadEnsamblador;
     private javax.swing.JPanel CantidadIntroInterfaz;
     private javax.swing.JLabel CantidadProductoresCierre;
     private javax.swing.JLabel CantidadProductoresCreditos;
     private javax.swing.JLabel CantidadProductoresInicio;
     private javax.swing.JLabel CantidadProductoresIntro;
     private javax.swing.JLabel CantidadProductoresPlot;
+    private javax.swing.JButton Enviar;
     private javax.swing.JLabel RolEmpleado1;
+    private javax.swing.JLabel RolEmpleado10;
     private javax.swing.JLabel RolEmpleado2;
-    private javax.swing.JTextField empleado;
+    private javax.swing.JLabel RolEmpleado3;
+    private javax.swing.JLabel RolEmpleado4;
+    private javax.swing.JLabel RolEmpleado5;
+    private javax.swing.JLabel RolEmpleado6;
+    private javax.swing.JLabel RolEmpleado7;
+    private javax.swing.JLabel RolEmpleado8;
+    private javax.swing.JLabel RolEmpleado9;
     private javax.swing.JTextField empleado1;
+    private javax.swing.JTextField empleado10;
+    private javax.swing.JTextField empleado11;
     private javax.swing.JTextField empleado2;
     private javax.swing.JTextField empleado3;
     private javax.swing.JTextField empleado4;
@@ -737,11 +1698,16 @@ public class CambioProductores extends javax.swing.JFrame {
     private javax.swing.JTextField empleado8;
     private javax.swing.JTextField empleado9;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -759,7 +1725,9 @@ public class CambioProductores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
