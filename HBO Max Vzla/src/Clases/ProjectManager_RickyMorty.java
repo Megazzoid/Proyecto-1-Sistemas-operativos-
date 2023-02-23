@@ -16,11 +16,12 @@ public class ProjectManager_RickyMorty extends Thread {
    
 Boolean ViendoRick = false;  
 private NewJFrame newJFrame = NewJFrame.getInstance();
+int salario = 7;
     
     
         @Override
         public void run() {
-            while (Main.remainingDays > 0) {
+            while(true) {
                 try {
                      // 
                     Main.ProjectManagerRickYmorty.acquire();
@@ -32,17 +33,19 @@ private NewJFrame newJFrame = NewJFrame.getInstance();
                         newJFrame.DiaRyM(Integer.toString(Main.remainingDays));
                         
                     }
+                    
+                    
                     Main.LeerRickyMorty.release();
                     // Libera el semaforo
                     Main.ProjectManagerRickYmorty.release();
                     
-                    for (int i = 0; i < 11; i++) {
+                    for (int i = 0; i < 7; i++) {
                     
                     ViendoRick = true;
-                    Thread.sleep((88));
+                    Thread.sleep((70));
                     newJFrame.PjRyM("Ver Rick y Morty");
                     ViendoRick = false;
-                    Thread.sleep((88));
+                    Thread.sleep((70));
                     newJFrame.PjRyM("Spring Reviews");
                     
                     }

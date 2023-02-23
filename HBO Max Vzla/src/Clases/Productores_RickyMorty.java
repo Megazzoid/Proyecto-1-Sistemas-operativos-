@@ -33,6 +33,8 @@ public class Productores_RickyMorty extends Thread {
                     Thread.sleep(1000);
                             Main.semaforoIntroRickYmorty.acquire(1);
                             
+                            Main.GastoRyM = Main.GastoRyM + 120;
+                            
                             contador = 30 - Main.semaforoIntroRickYmorty.availablePermits();
                             
                             newJFrame.getintroDisponibleRym(Integer.toString(contador));
@@ -50,6 +52,7 @@ public class Productores_RickyMorty extends Thread {
                try {
                     Thread.sleep(1000);
                             Main.semaforoCreditsRickyMorty.acquire(4);
+                            Main.GastoRyM = Main.GastoRyM + 72;
                             
                             contador = 25 - Main.semaforoCreditsRickyMorty.availablePermits();
                             
@@ -72,7 +75,8 @@ public class Productores_RickyMorty extends Thread {
                     Thread.sleep(2000);
                             Main.semaforoInicioRickyMorty.acquire(1);
                         
-                           
+                            Main.GastoRyM = Main.GastoRyM + 336;
+                            
                             newJFrame.getinicioDisponibleRym(Integer.toString(50 - Main.semaforoInicioRickyMorty.availablePermits()));
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -88,9 +92,12 @@ public class Productores_RickyMorty extends Thread {
                     Thread.sleep(4000);
                             Main.semaforoCierreRickyMorty.acquire(1);
                             
+                            Main.GastoRyM = Main.GastoRyM + 720;
+                            
                             contador = 55 - Main.semaforoCierreRickyMorty.availablePermits();
                             
                             newJFrame.getfinalDisponibleRym(Integer.toString(contador));
+                            
                       
                           
                             } catch (InterruptedException ex) {
@@ -108,6 +115,8 @@ public class Productores_RickyMorty extends Thread {
                     Thread.sleep(2000);
                             Main.semaforoPlotRickyMorty.acquire(1);
                             
+                            Main.GastoRyM = Main.GastoRyM + 480;
+                            
                             contador = 40 - Main.semaforoPlotRickyMorty.availablePermits();
                             
                             newJFrame.getPlotDisponibleRym(Integer.toString(contador));
@@ -124,16 +133,11 @@ public class Productores_RickyMorty extends Thread {
     public void run() {
         while(true){
             
-            try {
-                    Thread.sleep(1000);
-                    producirIntroRyM();
-                    producirCreditosRyM(); 
-                    producirInicioRyM();
-                    producirCierreRyM();
-                    producirPlotRyM();
-                            } catch (InterruptedException ex) {
-                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                            }
+            producirIntroRyM();
+            producirCreditosRyM();
+            producirInicioRyM();
+            producirCierreRyM();
+            producirPlotRyM();
                     }
            
         

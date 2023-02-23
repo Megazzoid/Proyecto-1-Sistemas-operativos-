@@ -39,7 +39,7 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoPlotRickyMorty.release(1);
                             Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
                             newJFrame.getCapituloPlotRyM(Integer.toString(Main.capitulosPlotRym));
-                            int capituloplot = 0;
+                            
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                         }}       
@@ -75,12 +75,7 @@ public class Emsamblador_RickMorty extends Thread {
     public void run() {
         while(true){
             
-            try {
-                    Thread.sleep(1000);
-                    emsamblar();
-                            } catch (InterruptedException ex) {
-                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                            }
+            emsamblar();
                     }
            
         
