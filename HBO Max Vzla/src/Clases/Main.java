@@ -21,6 +21,7 @@ public class Main {
     public static Semaphore semaforoInicio = new Semaphore(50);
     public static Semaphore semaforoCierra = new Semaphore(55);
     public static Semaphore semaforoGiro = new Semaphore(40);
+    public static Semaphore RickMorty = new Semaphore (1); 
     
     public static Productores_GOT hilo1;
     public static Productores_GOT hilo2;
@@ -29,13 +30,6 @@ public class Main {
     public static Productores_GOT hilo5;
     public static Productores_GOT hilo6;
     
-    public static volatile int numero = 30;
-    public static volatile int numero2 = 25;
-    public static volatile int numero3 = 50;
-    public static volatile int numero4 = 55;
-    public static volatile int numero5 = 40;
-    public static boolean check = true;
-    public static int productor = 2;
     
     // el semaforo de rick y morty
     
