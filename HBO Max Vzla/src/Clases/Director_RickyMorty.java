@@ -7,6 +7,8 @@ package Clases;
 
 import Interfaz.NewJFrame;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -27,10 +29,28 @@ public class Director_RickyMorty extends Thread {
     private NewJFrame newJFrame = NewJFrame.getInstance();
     int audencia = 0;
     int ganancia = 0;
+    private boolean pausar = false;
     
     
+    
+    public void pausar(){
+        pausar = true;
+    }
+    
+    
+    public void reanudar(){
+        pausar = false;
+    }
+    
+    @Override
     public void run() {
         while(true){
+            
+            synchronized(this){
+            while(pausar==true){
+                    System.out.println("");
+                }    
+            }  
             
             try {
             // Adquirir el semáforo del contador de días (Countdown)

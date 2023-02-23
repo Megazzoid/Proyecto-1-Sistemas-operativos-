@@ -68,6 +68,12 @@ public class Main {
     public static int remainingDays = TotalDays;
     public static int GastoRyM = 0;
     public static int seriesultimolote = 0;
+    public static int CantidadProductoresInicio = 4;
+    public static int CantidadProductoresCreditos = 1;
+    public static int CantidadProductoresCierre = 2;
+    public static int CantidadProductoresplot = 1;
+    public static int CantidadProductoresIntro = 2;
+    
                     
     public static void main(String[] args) {
 
@@ -110,6 +116,12 @@ public class Main {
         hilo5.start();
         hilo6.start();
         
+       
+        
+        
+        
+    }
+    public static void Iniciar(){
         hiloRym1.start();
         hiloRym2.start();
         hiloRym3.start();
@@ -124,11 +136,41 @@ public class Main {
         hiloRym12.start();
         hiloRym13.start();
         
-        
-        
+    }
+    
+     public static void Pausar(){
+        hiloRym1.pausar();
+        hiloRym2.pausar();
+        hiloRym3.pausar();
+        hiloRym4.pausar();
+        hiloRym5.pausar();
+        hiloRym6.pausar();
+        hiloRym7.pausar();
+        hiloRym8.pausar();
+        hiloRym9.pausar();
+        hiloRym10.pausar();
+        hiloRym11.pausar();
+        hiloRym12.pausar();
+        hiloRym13.pausar();
         
     }
-
+     
+     public static void Reanudar(){
+        hiloRym1.reanudar();
+        hiloRym2.reanudar();
+        hiloRym3.reanudar();
+        hiloRym4.reanudar();
+        hiloRym5.reanudar();
+        hiloRym6.reanudar();
+        hiloRym7.reanudar();
+        hiloRym8.reanudar();
+        hiloRym9.reanudar();
+        hiloRym10.reanudar();
+        hiloRym11.reanudar();
+        hiloRym12.reanudar();
+        hiloRym13.reanudar();
+        
+    }
 }
 
 

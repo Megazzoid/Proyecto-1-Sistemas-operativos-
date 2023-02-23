@@ -17,11 +17,27 @@ public class ProjectManager_RickyMorty extends Thread {
 Boolean ViendoRick = false;  
 private NewJFrame newJFrame = NewJFrame.getInstance();
 int salario = 7;
+private boolean pausar = false;
+
+public void pausar(){
+        pausar = true;
+    }
+    
+    
+public void reanudar(){
+        pausar = false;
+}
     
     
         @Override
         public void run() {
             while(true) {
+                
+                
+                while(pausar==true){
+                 System.out.println("");   
+                }    
+          
                 try {
                      // 
                     Main.ProjectManagerRickYmorty.acquire();

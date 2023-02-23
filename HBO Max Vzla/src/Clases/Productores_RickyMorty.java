@@ -18,6 +18,7 @@ public class Productores_RickyMorty extends Thread {
     int SalarioAcumulado;
     private NewJFrame newJFrame = NewJFrame.getInstance();
     int contador;
+    private boolean pausar = false;
    
 
     public Productores_RickyMorty(Semaphore espacioEnDrive, String tipoProductor) {
@@ -25,6 +26,23 @@ public class Productores_RickyMorty extends Thread {
         this.tipoProductor = tipoProductor;
         
     }
+    
+    public void pausar(){
+        this.pausar = true;
+    }
+    
+    
+    public void reanudar(){
+        this.pausar = false;
+    }
+    
+   public String VerTipo(){
+       return tipoProductor;
+   }
+   
+   public void CambiarTipo(String Tipo){
+       tipoProductor = Tipo;
+   }
     
     public void producirIntroRyM(){
         if (tipoProductor.equals("Intro")) {
@@ -66,6 +84,7 @@ public class Productores_RickyMorty extends Thread {
     
         }
     }
+    
         
     
     public void producirInicioRyM(){
@@ -132,6 +151,11 @@ public class Productores_RickyMorty extends Thread {
     @Override
     public void run() {
         while(true){
+            synchronized(this){
+            while(pausar==true){
+                    System.out.println("");
+                }    
+            }
             
             producirIntroRyM();
             producirCreditosRyM();

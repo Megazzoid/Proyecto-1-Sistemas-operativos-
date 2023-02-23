@@ -17,6 +17,19 @@ public class Emsamblador_RickMorty extends Thread {
     Semaphore Emsamblador;
     int capituloplot = 0;
     private NewJFrame newJFrame = NewJFrame.getInstance();
+    private boolean pausar = false;
+    
+    
+    
+    
+    public void pausar(){
+        this.pausar = true;
+    }
+    
+    
+    public void reanudar(){
+        this.pausar = false;
+    }
   
   
     public Emsamblador_RickMorty(Semaphore SemaforoEmsamblador) {
@@ -39,6 +52,7 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoPlotRickyMorty.release(1);
                             Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
                             newJFrame.getCapituloPlotRyM(Integer.toString(Main.capitulosPlotRym));
+                            capituloplot = 0;
                             
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
@@ -75,6 +89,10 @@ public class Emsamblador_RickMorty extends Thread {
     public void run() {
         while(true){
             
+            while(pausar==true){
+                     System.out.println("");
+                }    
+              
             emsamblar();
                     }
            

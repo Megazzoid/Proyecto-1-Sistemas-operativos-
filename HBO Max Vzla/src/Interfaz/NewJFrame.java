@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import Clases.Main;
 import Clases.Productores_GOT;
 import java.util.concurrent.Semaphore;
 import javax.swing.JTextField;
@@ -44,6 +45,8 @@ public class NewJFrame extends javax.swing.JFrame {
         initComponents();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+        this.PausarRyM.setEnabled(false);
+        this.Reanudar.setEnabled(false);
 
     }
     
@@ -233,6 +236,10 @@ public class NewJFrame extends javax.swing.JFrame {
         CapHBO = new javax.swing.JTextField();
         addEnsa = new javax.swing.JButton();
         delEnsa = new javax.swing.JButton();
+        ComenzarRyM = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        PausarRyM = new javax.swing.JButton();
+        Reanudar = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
 
@@ -626,6 +633,38 @@ public class NewJFrame extends javax.swing.JFrame {
         delEnsa.setText("-");
         jPanel1.add(delEnsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 560, 60, -1));
 
+        ComenzarRyM.setText("Iniciar");
+        ComenzarRyM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComenzarRyMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ComenzarRyM, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 140, -1, -1));
+
+        jButton2.setText("Modificar empleados");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 140, -1, -1));
+
+        PausarRyM.setText("Pausar");
+        PausarRyM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PausarRyMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PausarRyM, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 140, -1, -1));
+
+        Reanudar.setText("Reanudar");
+        Reanudar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReanudarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Reanudar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 140, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -687,6 +726,35 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addCredActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CambioProductores changeProductors = new CambioProductores();
+        changeProductors.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void ComenzarRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComenzarRyMActionPerformed
+        // TODO add your handling code here:
+        Main.Iniciar();
+        this.ComenzarRyM.setEnabled(false);
+        this.PausarRyM.setEnabled(true);
+    }//GEN-LAST:event_ComenzarRyMActionPerformed
+
+    private void PausarRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PausarRyMActionPerformed
+        // TODO add your handling code here:
+        Main.Pausar();
+        this.PausarRyM.setEnabled(false);
+        this.Reanudar.setEnabled(true);
+    }//GEN-LAST:event_PausarRyMActionPerformed
+
+    private void ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReanudarActionPerformed
+        // TODO add your handling code here:
+        Main.Reanudar();
+        this.Reanudar.setEnabled(false);
+        this.PausarRyM.setEnabled(true);
+             
+    }//GEN-LAST:event_ReanudarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -707,6 +775,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField CapHBO;
     private javax.swing.JLabel CapituloPlotRyM;
     private javax.swing.JLabel CapituloRyM;
+    private javax.swing.JButton ComenzarRyM;
     private javax.swing.JLabel CreditosRyM;
     private javax.swing.JLabel DiasFaltantesRyM;
     private javax.swing.JTextField DirectorGOT;
@@ -715,8 +784,10 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel GananciaRyM;
     private javax.swing.JLabel InicioRyM;
     private javax.swing.JLabel LoteRyM;
+    private javax.swing.JButton PausarRyM;
     private javax.swing.JLabel PjRyM;
     private javax.swing.JLabel PlotRyM;
+    private javax.swing.JButton Reanudar;
     private javax.swing.JLabel SalarioMensual;
     private javax.swing.JLabel SalarioPMRYM;
     private javax.swing.JButton addCierre;
@@ -739,6 +810,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField iniDis;
     private javax.swing.JTextField introDis;
     private javax.swing.JLabel introDisponible;
+    private javax.swing.JButton jButton2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
