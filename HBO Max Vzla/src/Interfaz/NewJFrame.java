@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import Clases.Productores_GOT;
+import java.util.concurrent.Semaphore;
 import javax.swing.JTextField;
 
 
@@ -16,6 +18,23 @@ import javax.swing.JTextField;
  */
 public class NewJFrame extends javax.swing.JFrame {
     private static NewJFrame newJFrame;
+    public static int num_prod;
+    public static int Productores;
+    public static int num_prod2;
+    
+    public static Semaphore semaforoMax = new Semaphore(200);
+    public static Semaphore semaforoIntro = new Semaphore(30);
+    public static Semaphore semaforoCredits = new Semaphore(25);
+    public static Semaphore semaforoInicio = new Semaphore(50);
+    public static Semaphore semaforoCierra = new Semaphore(55);
+    public static Semaphore semaforoGiro = new Semaphore(40);
+    
+    public static Productores_GOT hilo1;
+    public static Productores_GOT hilo2;
+    public static Productores_GOT hilo3;
+    public static Productores_GOT hilo4;
+    public static Productores_GOT hilo5;
+    public static Productores_GOT hilo6;
      
     /**
      * Creates new form NewJFrame
@@ -33,6 +52,14 @@ public class NewJFrame extends javax.swing.JFrame {
             newJFrame =  new NewJFrame();
         }
         return newJFrame;
+    }
+    
+    public synchronized void introDisp(String info){
+        introDis.setText(info);
+    }
+    
+    public synchronized void credDisp(String info){
+        creditoDis.setText(info);
     }
     
    public synchronized void getintroDisponibleRym (String info){
@@ -89,6 +116,29 @@ public class NewJFrame extends javax.swing.JFrame {
     public synchronized void GananciaRyM(String info){
        GananciaRyM.setText(info);
    }
+    public void Productores(int productores){
+        this.num_prod = productores; 
+    }
+    
+    public void Productores2(int productores2){
+        this.num_prod2 = productores2; 
+    }
+    
+    public void Productores3(int productores3){
+        //this.num_prod3 = productores3; 
+    }
+    
+    public void Productores4(int productores4){
+        //this.num_prod4 = productores4; 
+    }
+    
+    public void Productores5(int productores5){
+        //this.num_prod5 = productores5; 
+    }
+    
+    public void ProductoresEnsambladores(int ensa){
+        //this.num_ens = ensa; 
+    }
    
        
     /**
@@ -152,7 +202,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         introDis = new javax.swing.JTextField();
-        credDis = new javax.swing.JTextField();
+        creditoDis = new javax.swing.JTextField();
         iniDis = new javax.swing.JTextField();
         cierreDis = new javax.swing.JTextField();
         sueldoGOT = new javax.swing.JTextField();
@@ -375,6 +425,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         addIntro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addIntro.setText("+");
+        addIntro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addIntroActionPerformed(evt);
+            }
+        });
         jPanel1.add(addIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 60, -1));
 
         jLabel23.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
@@ -406,10 +461,10 @@ public class NewJFrame extends javax.swing.JFrame {
         introDis.setText("0");
         jPanel1.add(introDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, -1, -1));
 
-        credDis.setEditable(false);
-        credDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        credDis.setText("0");
-        jPanel1.add(credDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 290, -1, -1));
+        creditoDis.setEditable(false);
+        creditoDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        creditoDis.setText("0");
+        jPanel1.add(creditoDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 290, -1, -1));
 
         iniDis.setEditable(false);
         iniDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -500,6 +555,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         addCred.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addCred.setText("+");
+        addCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCredActionPerformed(evt);
+            }
+        });
         jPanel1.add(addCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 60, -1));
 
         delCred.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -604,32 +664,36 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CapHBOActionPerformed
 
+    private void addIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addIntroActionPerformed
+
+        num_prod++;
+        for (int i = 0; i < num_prod; i++) {
+                String palabra = prodIntro.getText();
+                int pal = Integer.parseInt(palabra);
+                pal++;
+                prodIntro.setText(String.valueOf(pal));
+                break;
+        }
+    }//GEN-LAST:event_addIntroActionPerformed
+
+    private void addCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCredActionPerformed
+        num_prod2++;
+        for (int i = 0; i < num_prod2; i++) {
+                String valor= prodCred.getText();
+                int val = Integer.parseInt(valor);
+                val++;
+                prodCred.setText(String.valueOf(val));
+                break;
+        }
+    }//GEN-LAST:event_addCredActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        
+        hilo1.Productores(Productores);
+        hilo1.start();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -663,7 +727,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton addPlot;
     private javax.swing.JTextField capListo;
     private javax.swing.JTextField cierreDis;
-    private javax.swing.JTextField credDis;
+    private javax.swing.JTextField creditoDis;
     private javax.swing.JButton delCierre;
     private javax.swing.JButton delCred;
     private javax.swing.JButton delEnsa;
