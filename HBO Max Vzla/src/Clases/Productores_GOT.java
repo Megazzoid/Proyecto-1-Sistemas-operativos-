@@ -5,6 +5,7 @@
  */
 package Clases;
 
+import Interfaz.NewJFrame;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,6 +15,8 @@ import java.util.logging.Logger;
  * @author danma
  */
 public class Productores_GOT extends Thread{
+    
+    private NewJFrame newJFrame = NewJFrame.getInstance();
     
     Semaphore semaforoIntro;
     Semaphore semaforoCredits;
@@ -29,7 +32,9 @@ public class Productores_GOT extends Thread{
     int num_prod4;
     int num_prod5;
     int num_ens;
-   
+    int cap_plot = 0;
+    int contador;
+    int contador_ens;
     
     public Productores_GOT(Semaphore semaforoMax, String texto){
         this.semaforoLimite = semaforoMax;
@@ -60,19 +65,21 @@ public class Productores_GOT extends Thread{
     }
 
     public void producirIntro(){
-        for(int i = 0; i <= Main.hilo1.num_prod; i++){
-            if(i == Main.hilo1.num_prod){
-                for(int j = 0; j < Main.hilo1.num_prod; j++){
-                    if(Main.semaforoIntro.availablePermits() > 0){
+        for(int i = 0; i <= newJFrame.num_prod; i++){
+            if(i == newJFrame.num_prod){
+                for(int j = 0; j < newJFrame.num_prod; j++){
+                    if(NewJFrame.semaforoIntro.availablePermits() > 0){
                         try {
-                            Thread.sleep(1000);
-                            Main.semaforoIntro.acquire(1);
-                            Main.numero--;
-                            System.out.println(Main.numero);
-                            semaforoLimite.acquire(1);
+                            NewJFrame.semaforoIntro.acquire(1);
+                            NewJFrame.semaforoMax.acquire(1);
+                            contador++;
+                            newJFrame.introDisp(Integer.toString(contador));
+                            System.out.println("hola");
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             }
+                    } else {
+                        System.out.println("toy full");
                     }
                 }
             }
@@ -80,16 +87,15 @@ public class Productores_GOT extends Thread{
     }
     
     public void producirCredits(){
-        for(int i = 0; i <= Main.hilo2.num_prod2; i++){
-            if(i == Main.hilo2.num_prod2){
-                for(int f = 0; f < Main.hilo2.num_prod2; f++){
-                    if(Main.semaforoCredits.availablePermits() > 0){
+        for(int i = 0; i <= newJFrame.num_prod2; i++){
+            if(i == newJFrame.num_prod2){
+                for(int f = 0; f < newJFrame.num_prod2; f++){
+                    if(NewJFrame.semaforoCredits.availablePermits() > 0){
                         try {
-                            Thread.sleep(1000);
-                            Main.semaforoCredits.acquire(1);
-                            Main.numero2--;
-                            System.out.println(Main.numero2);
-                            semaforoLimite.acquire(1);
+                            NewJFrame.semaforoCredits.acquire(1);
+                            NewJFrame.semaforoMax.acquire(1);
+                            contador++;
+                            newJFrame.credDisp(Integer.toString(contador));
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -100,16 +106,15 @@ public class Productores_GOT extends Thread{
     }
     
     public void producirInicio(){
-        for(int i = 0; i <= Main.hilo3.num_prod3; i++){
-            if(i == Main.hilo3.num_prod3){
-                for(int f = 0; f < Main.hilo3.num_prod3; f++){
-                    if(Main.semaforoInicio.availablePermits() > 0){
+        for(int i = 0; i <= newJFrame.num_prod3; i++){
+            if(i == newJFrame.num_prod3){
+                for(int f = 0; f < newJFrame.num_prod3; f++){
+                    if(NewJFrame.semaforoInicio.availablePermits() > 0){
                         try {
-                            Thread.sleep(2000);
-                            Main.semaforoInicio.acquire(1);
-                            Main.numero3--;
-                            System.out.println(Main.numero3);
-                            semaforoLimite.acquire(1);
+                            NewJFrame.semaforoInicio.acquire(1);
+                            NewJFrame.semaforoMax.acquire(1);
+                            contador++;
+                            newJFrame.iniDisp(Integer.toString(contador));
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             } 
@@ -121,16 +126,15 @@ public class Productores_GOT extends Thread{
 }
        
     public void producirCierra(){
-        for(int i = 0; i <= Main.hilo4.num_prod4; i++){
-            if(i == Main.hilo4.num_prod4){
-                for(int f = 0; f < Main.hilo4.num_prod4; f++){
-                    if(Main.semaforoCierra.availablePermits() > 0){
+        for(int i = 0; i <= newJFrame.num_prod4; i++){
+            if(i == newJFrame.num_prod4){
+                for(int f = 0; f < newJFrame.num_prod4; f++){
+                    if(NewJFrame.semaforoCierra.availablePermits() > 0){
                         try {
-                            Thread.sleep(4000);
-                            Main.semaforoCierra.acquire(1);
-                            Main.numero4--;
-                            System.out.println(Main.numero4);
-                            semaforoLimite.acquire(1);
+                            NewJFrame.semaforoCierra.acquire(1);
+                            NewJFrame.semaforoMax.acquire(1);
+                            contador++;
+                            newJFrame.cierreDisp(Integer.toString(contador));    
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             } 
@@ -141,16 +145,15 @@ public class Productores_GOT extends Thread{
     }
 }
     public void producirGiro(){
-        for(int i = 0; i <= Main.hilo5.num_prod5; i++){
-            if(i == Main.hilo5.num_prod5){
-                for(int f = 0; f < Main.hilo5.num_prod5; f++){
-                    if(Main.semaforoGiro.availablePermits() > 0){
+        for(int i = 0; i <= newJFrame.num_prod5; i++){
+            if(i == newJFrame.num_prod5){
+                for(int f = 0; f < newJFrame.num_prod5; f++){
+                    if(NewJFrame.semaforoGiro.availablePermits() > 0){
                         try {
-                            Thread.sleep(2000);
-                            Main.semaforoGiro.acquire(1);
-                            Main.numero5--;
-                            System.out.println(Main.numero5);
-                            semaforoLimite.acquire(1);
+                            NewJFrame.semaforoGiro.acquire(1);
+                            NewJFrame.semaforoMax.acquire(1);
+                            contador++;
+                            newJFrame.plotDisp(Integer.toString(contador));
                             } catch (InterruptedException ex) {
                                 Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                             } 
@@ -161,28 +164,55 @@ public class Productores_GOT extends Thread{
     }
 }
     public void ConstruirSerie(){
-        for(int i = 0; i <= Main.hilo6.num_ens; i++){
-            if(i == Main.hilo6.num_ens){
-                for(int f = 0; f < Main.hilo6.num_ens; f++){
-                    if(Main.semaforoIntro.availablePermits() <= 29 && Main.semaforoCierra.availablePermits() <= 54 && Main.semaforoCredits.availablePermits() <= 24 
-                            && Main.semaforoInicio.availablePermits() <= 49 && Main.semaforoGiro.availablePermits() <= 39 ){
-                        try {
-                            Thread.sleep(5000);
-                            Main.semaforoIntro.release(1);
-                            Main.semaforoCredits.release(1);
-                            Main.semaforoInicio.release(1);
-                            Main.semaforoCierra.release(1);
-                            Main.semaforoGiro.release(1);
-                            Main.semaforoMax.release(5);
-                            System.out.println("Serie producida");
-                        } catch (InterruptedException ex) {
-                            Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    } else {
-                        System.out.println("no hay");
-                    }
+        if(cap_plot<4){
+            cap_plot++;
+            for(int i = 0; i <= newJFrame.num_ens; i++){
+                    if(i == newJFrame.num_ens){
+                    for(int f = 0; f < newJFrame.num_ens; f++){
+                        if(NewJFrame.semaforoIntro.availablePermits() <= 29 && NewJFrame.semaforoCierra.availablePermits() <= 54 && NewJFrame.semaforoCredits.availablePermits() <= 23 
+                            && NewJFrame.semaforoInicio.availablePermits() <= 49){
+                        NewJFrame.semaforoIntro.release(1);
+                        NewJFrame.semaforoCredits.release(1);
+                        NewJFrame.semaforoInicio.release(1);
+                        NewJFrame.semaforoCierra.release(1);
+                        NewJFrame.semaforoGiro.release(1);
+                        NewJFrame.semaforoMax.release(5);
+                        contador_ens++;
+                        newJFrame.capDisp(Integer.toString(contador_ens));
+                        newJFrame.introDisp(Integer.toString(contador));
+                        System.out.println(cap_plot);
+                    } 
+                    
                 }
             }
+        }
+            
+        } else {
+            if(cap_plot == 4){
+            for(int i = 0; i <= newJFrame.num_ens; i++){
+                    if(i == newJFrame.num_ens){
+                    for(int f = 0; f < newJFrame.num_ens; f++){
+                        if(NewJFrame.semaforoIntro.availablePermits() <= 29 && NewJFrame.semaforoCierra.availablePermits() <= 54 && NewJFrame.semaforoCredits.availablePermits() <= 24 
+                            && NewJFrame.semaforoInicio.availablePermits() <= 49 && NewJFrame.semaforoGiro.availablePermits() <= 39 ){
+                        NewJFrame.semaforoIntro.release(1);
+                        NewJFrame.semaforoCredits.release(1);
+                        NewJFrame.semaforoInicio.release(1);
+                        NewJFrame.semaforoCierra.release(1);
+                        NewJFrame.semaforoGiro.release(1);
+                        NewJFrame.semaforoMax.release(5);
+                        contador_ens++;
+                        cap_plot = 0;
+                        newJFrame.capDisp(Integer.toString(contador_ens));
+                        newJFrame.introDisp(Integer.toString(contador));
+                        System.out.println(cap_plot);
+                    } 
+                    
+                }
+            }
+        }
+            
+        } 
+            
         }
     
 }
@@ -210,7 +240,7 @@ public class Productores_GOT extends Thread{
         }
             for(int i = 0; i < num_prod3; i++){
                try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 producirInicio();
            } catch (InterruptedException ex) {
                Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
@@ -219,7 +249,7 @@ public class Productores_GOT extends Thread{
         }
             for(int i = 0; i < num_prod4; i++){
                try {
-                Thread.sleep(1000);
+                Thread.sleep(4000);
                 producirCierra();
            } catch (InterruptedException ex) {
                Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
@@ -228,7 +258,7 @@ public class Productores_GOT extends Thread{
         }
             for(int i = 0; i < num_prod5; i++){
                try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 producirGiro();
            } catch (InterruptedException ex) {
                Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
@@ -237,7 +267,7 @@ public class Productores_GOT extends Thread{
         }
             for(int i = 0; i < num_ens; i++){
                try {
-                   Thread.sleep(1000);
+                   Thread.sleep(2000);
                    ConstruirSerie();
                } catch (InterruptedException ex) {
                    Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
@@ -249,7 +279,6 @@ public class Productores_GOT extends Thread{
                
     }
 }
- 
 
 
 
