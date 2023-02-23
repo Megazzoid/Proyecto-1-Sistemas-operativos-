@@ -29,34 +29,10 @@ public class NewJFrame extends javax.swing.JFrame {
     }
     
     private void setAjustes(){
-        introDisponible.setEditable(false);
-        introDisponible.setHorizontalAlignment(JTextField.CENTER); 
-        InicioRyM.setEditable(false);
-        InicioRyM.setHorizontalAlignment(JTextField.CENTER); 
-        CreditosRyM.setEditable(false);
-        CreditosRyM.setHorizontalAlignment(JTextField.CENTER); 
-        FinalesRyM.setEditable(false);
-        FinalesRyM.setHorizontalAlignment(JTextField.CENTER); 
-        PlotRyM.setEditable(false);
-        PlotRyM.setHorizontalAlignment(JTextField.CENTER);
-        CapituloRyM.setEditable(false);
-        CapituloRyM.setHorizontalAlignment(JTextField.CENTER);
-        CapituloPlotRyM.setEditable(false);
-        CapituloPlotRyM.setHorizontalAlignment(JTextField.CENTER);
-        DiasFaltantesRyM.setEditable(false);
-        DiasFaltantesRyM.setHorizontalAlignment(JTextField.CENTER);
-        PjRyM.setEditable(false);
-        PjRyM.setHorizontalAlignment(JTextField.CENTER);
-        DirectorRyM.setEditable(false);
-        DirectorRyM.setHorizontalAlignment(JTextField.CENTER);
-        SalarioPMRYM.setEditable(false);
-        SalarioPMRYM.setHorizontalAlignment(JTextField.CENTER);
-        SalarioMensual.setEditable(false);
-        SalarioMensual.setHorizontalAlignment(JTextField.CENTER);
-        LoteRyM.setEditable(false);
-        LoteRyM.setHorizontalAlignment(JTextField.CENTER);
-        GananciaRyM.setEditable(false);
-        GananciaRyM.setHorizontalAlignment(JTextField.CENTER);
+         
+        
+       
+       
     }
     
     public static synchronized NewJFrame getInstance(){
@@ -134,7 +110,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -143,25 +118,26 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        introDisponible = new javax.swing.JTextField();
-        InicioRyM = new javax.swing.JTextField();
-        CreditosRyM = new javax.swing.JTextField();
-        FinalesRyM = new javax.swing.JTextField();
-        PlotRyM = new javax.swing.JTextField();
-        CapituloRyM = new javax.swing.JTextField();
-        CapituloPlotRyM = new javax.swing.JTextField();
-        DiasFaltantesRyM = new javax.swing.JTextField();
-        PjRyM = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        DirectorRyM = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        SalarioPMRYM = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        SalarioMensual = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        LoteRyM = new javax.swing.JTextField();
-        GananciaRyM = new javax.swing.JTextField();
+        introDisponible = new javax.swing.JLabel();
+        InicioRyM = new javax.swing.JLabel();
+        CreditosRyM = new javax.swing.JLabel();
+        FinalesRyM = new javax.swing.JLabel();
+        PlotRyM = new javax.swing.JLabel();
+        CapituloRyM = new javax.swing.JLabel();
+        CapituloPlotRyM = new javax.swing.JLabel();
+        DiasFaltantesRyM = new javax.swing.JLabel();
+        LoteRyM = new javax.swing.JLabel();
+        PjRyM = new javax.swing.JLabel();
+        GananciaRyM = new javax.swing.JLabel();
+        SalarioPMRYM = new javax.swing.JLabel();
+        DirectorRyM = new javax.swing.JLabel();
+        SalarioMensual = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
 
@@ -178,261 +154,216 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("INTROS DISPONIBLES");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("INTROS DISPONIBLES:");
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
-        jLabel2.setText("Planta Rick y Morty");
-
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("INICIOS DISPONIBLES");
 
-        jLabel4.setText("CRÉDITOS");
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel4.setText("CRÉDITOS DISPONIBLES");
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setText("FINALES PRODUCIDOS ");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("PLOT TWIST PRODUCIDOS");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("CAPÍTULOS PRODUCIDOS");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setText("CAP. PLOT TWIST PRODUCIDOS");
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("DÍAS PARA LA ENTREGA");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setText("Que Hace ProjectManager");
 
-        introDisponible.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        introDisponible.setText("0");
-        introDisponible.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                introDisponibleActionPerformed(evt);
-            }
-        });
-
-        InicioRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        InicioRyM.setText("0");
-
-        CreditosRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        CreditosRyM.setText("0");
-
-        FinalesRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        FinalesRyM.setText("0");
-        FinalesRyM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FinalesRyMActionPerformed(evt);
-            }
-        });
-
-        PlotRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        PlotRyM.setText("0");
-        PlotRyM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlotRyMActionPerformed(evt);
-            }
-        });
-
-        CapituloRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        CapituloRyM.setText("0");
-        CapituloRyM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CapituloRyMActionPerformed(evt);
-            }
-        });
-
-        CapituloPlotRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        CapituloPlotRyM.setText("0");
-
-        DiasFaltantesRyM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        DiasFaltantesRyM.setText("30");
-        DiasFaltantesRyM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DiasFaltantesRyMActionPerformed(evt);
-            }
-        });
-
-        PjRyM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PjRyMActionPerformed(evt);
-            }
-        });
-
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("Que hace el director");
 
-        DirectorRyM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DirectorRyMActionPerformed(evt);
-            }
-        });
-
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("Salario PM");
 
-        SalarioPMRYM.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        SalarioPMRYM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalarioPMRYMActionPerformed(evt);
-            }
-        });
-
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel13.setText("Gasto Salario Mensual");
 
-        jLabel14.setText("Capitulos ultimos lotes");
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel14.setText("Capitulos por lote");
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel15.setText("Ganancia ultimo mes ");
+
+        introDisponible.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        introDisponible.setText("0");
+
+        InicioRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        InicioRyM.setText("0");
+
+        CreditosRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CreditosRyM.setText("0");
+
+        FinalesRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        FinalesRyM.setText("0");
+
+        PlotRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        PlotRyM.setText("0");
+
+        CapituloRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CapituloRyM.setText("0");
+
+        CapituloPlotRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CapituloPlotRyM.setText("0");
+
+        DiasFaltantesRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        DiasFaltantesRyM.setText("30");
+
+        LoteRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        LoteRyM.setText("Waiting");
+
+        PjRyM.setText("Viendo RyM");
+
+        GananciaRyM.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        GananciaRyM.setText("Waiting");
+
+        SalarioPMRYM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        SalarioPMRYM.setText("7");
+
+        DirectorRyM.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        DirectorRyM.setText("Nada");
+
+        SalarioMensual.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        SalarioMensual.setText("Waiting");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setText("Estudio Rick Y Morty");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 545, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(827, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(introDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(13, 13, 13))
-                                    .addComponent(jLabel1))
+                                .addGap(5, 5, 5)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jLabel3)
-                                        .addGap(41, 41, 41)
-                                        .addComponent(jLabel4))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(9, 9, 9)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(InicioRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(CreditosRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(PlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jLabel6))
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(DirectorRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                .addGap(19, 19, 19)
-                                                                .addComponent(jLabel13))
-                                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(SalarioMensual, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                        .addGap(0, 0, Short.MAX_VALUE))))))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(FinalesRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(DiasFaltantesRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(PjRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel9)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel10)))
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(SalarioPMRYM, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(40, 40, 40)
-                                                .addComponent(jLabel12))))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(33, 33, 33)
-                                        .addComponent(jLabel2)))
-                                .addGap(0, 1, Short.MAX_VALUE)))
-                        .addContainerGap(39, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
                                     .addComponent(jLabel5)
-                                    .addComponent(CapituloRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel11))
-                                    .addComponent(CapituloPlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
                                     .addComponent(jLabel14)
-                                    .addComponent(LoteRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(40, 40, 40)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10)
                                     .addComponent(jLabel15)
-                                    .addComponent(GananciaRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel13)))
+                            .addComponent(jLabel1))
+                        .addGap(85, 85, 85)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(SalarioPMRYM, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(DirectorRyM, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(SalarioMensual, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(13, 13, 13))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(DiasFaltantesRyM)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(CapituloPlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(InicioRyM)
+                                            .addComponent(introDisponible)
+                                            .addComponent(CreditosRyM)
+                                            .addComponent(FinalesRyM)
+                                            .addComponent(PlotRyM)
+                                            .addComponent(CapituloRyM)))
+                                    .addComponent(LoteRyM)
+                                    .addComponent(PjRyM))
+                                .addGap(3, 3, 3))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(GananciaRyM))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(jLabel2)))
+                .addGap(125, 125, 125))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(introDisponible))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(InicioRyM))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(CreditosRyM)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CreditosRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(InicioRyM)
-                    .addComponent(introDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel5)
+                    .addComponent(FinalesRyM))
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(FinalesRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(PlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(SalarioMensual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                    .addComponent(PlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CapituloRyM))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CapituloPlotRyM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CapituloRyM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(DirectorRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                    .addComponent(CapituloPlotRyM))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel12))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(DiasFaltantesRyM, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(PjRyM))
-                    .addComponent(SalarioPMRYM, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                    .addComponent(DiasFaltantesRyM))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jLabel15))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(LoteRyM, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(LoteRyM))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(PjRyM))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
                     .addComponent(GananciaRyM))
-                .addGap(308, 308, 308))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(SalarioPMRYM))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel13))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(DirectorRyM)
+                        .addGap(42, 42, 42)
+                        .addComponent(SalarioMensual)))
+                .addGap(163, 163, 163))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -440,51 +371,19 @@ public class NewJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void introDisponibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_introDisponibleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_introDisponibleActionPerformed
-
-    private void PlotRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlotRyMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PlotRyMActionPerformed
-
-    private void FinalesRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalesRyMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FinalesRyMActionPerformed
-
-    private void CapituloRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CapituloRyMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CapituloRyMActionPerformed
-
-    private void DiasFaltantesRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiasFaltantesRyMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DiasFaltantesRyMActionPerformed
-
-    private void PjRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PjRyMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PjRyMActionPerformed
-
-    private void SalarioPMRYMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioPMRYMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SalarioPMRYMActionPerformed
-
-    private void DirectorRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirectorRyMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DirectorRyMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -522,20 +421,20 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CapituloPlotRyM;
-    private javax.swing.JTextField CapituloRyM;
-    private javax.swing.JTextField CreditosRyM;
-    private javax.swing.JTextField DiasFaltantesRyM;
-    private javax.swing.JTextField DirectorRyM;
-    private javax.swing.JTextField FinalesRyM;
-    private javax.swing.JTextField GananciaRyM;
-    private javax.swing.JTextField InicioRyM;
-    private javax.swing.JTextField LoteRyM;
-    private javax.swing.JTextField PjRyM;
-    private javax.swing.JTextField PlotRyM;
-    private javax.swing.JTextField SalarioMensual;
-    private javax.swing.JTextField SalarioPMRYM;
-    private javax.swing.JTextField introDisponible;
+    private javax.swing.JLabel CapituloPlotRyM;
+    private javax.swing.JLabel CapituloRyM;
+    private javax.swing.JLabel CreditosRyM;
+    private javax.swing.JLabel DiasFaltantesRyM;
+    private javax.swing.JLabel DirectorRyM;
+    private javax.swing.JLabel FinalesRyM;
+    private javax.swing.JLabel GananciaRyM;
+    private javax.swing.JLabel InicioRyM;
+    private javax.swing.JLabel LoteRyM;
+    private javax.swing.JLabel PjRyM;
+    private javax.swing.JLabel PlotRyM;
+    private javax.swing.JLabel SalarioMensual;
+    private javax.swing.JLabel SalarioPMRYM;
+    private javax.swing.JLabel introDisponible;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
