@@ -267,7 +267,7 @@ public class CambioProductores extends javax.swing.JFrame {
 
         RolEmpleado1.setText("Intro");
 
-        jLabel18.setText("Area");
+        jLabel18.setText("AREA");
 
         RolEmpleado2.setText("Intro");
 

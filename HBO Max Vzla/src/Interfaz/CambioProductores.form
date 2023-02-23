@@ -660,7 +660,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel18">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Area"/>
+            <Property name="text" type="java.lang.String" value="AREA"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="RolEmpleado2">
