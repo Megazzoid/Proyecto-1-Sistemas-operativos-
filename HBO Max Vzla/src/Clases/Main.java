@@ -45,6 +45,8 @@ public class Main {
     public static Semaphore semaforoCierreRickyMorty = new Semaphore(55);
     public static Semaphore semaforoPlotRickyMorty = new Semaphore(40);
     public static Semaphore semaforoEmsamblador = new Semaphore(1);
+    public static Semaphore ProjectManagerRickYmorty = new Semaphore(1);
+    public static Semaphore LeerRickyMorty = new Semaphore(1);
     
     public static Productores_RickyMorty hiloRym1;
     public static Productores_RickyMorty hiloRym2;
@@ -57,8 +59,11 @@ public class Main {
     public static Productores_RickyMorty hiloRym9;
     public static Productores_RickyMorty hiloRym10;
     public static Emsamblador_RickMorty hiloRym11;
+    public static ProjectManager_RickyMorty hiloRym12;
     public static int capituloslistosRym = 0;
     public static int capitulosPlotRym = 0;
+    public static int TotalDays = 30;
+    public static int remainingDays = TotalDays;
                     
     public static void main(String[] args) {
 
@@ -88,6 +93,8 @@ public class Main {
         hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
         hiloRym10 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Plot");
         hiloRym11 = new Emsamblador_RickMorty(semaforoEmsamblador);
+        hiloRym12 = new ProjectManager_RickyMorty();
+        
        
         
         
@@ -109,6 +116,7 @@ public class Main {
         hiloRym9.start();
         hiloRym10.start();
         hiloRym11.start();
+        hiloRym12.start();
         
         
         
