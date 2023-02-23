@@ -22,6 +22,23 @@ public class CambioProductores extends javax.swing.JFrame {
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         empleado1.setText("");
+        empleado2.setText("");
+        empleado3.setText("");
+        empleado4.setText("");
+        empleado5.setText("");
+        empleado6.setText("");
+        empleado7.setText("");
+        empleado8.setText("");
+        empleado9.setText("");
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     /**
@@ -54,17 +71,34 @@ public class CambioProductores extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         CantidadProductoresIntro = new javax.swing.JLabel();
+        CantidadProductoresInicio = new javax.swing.JLabel();
+        CantidadProductoresCreditos = new javax.swing.JLabel();
+        CantidadProductoresPlot = new javax.swing.JLabel();
+        CantidadProductoresCierre = new javax.swing.JLabel();
+        empleado2 = new javax.swing.JTextField();
+        empleado3 = new javax.swing.JTextField();
+        empleado = new javax.swing.JTextField();
+        empleado5 = new javax.swing.JTextField();
+        empleado4 = new javax.swing.JTextField();
+        empleado6 = new javax.swing.JTextField();
+        empleado7 = new javax.swing.JTextField();
+        empleado8 = new javax.swing.JTextField();
+        empleado9 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        RolEmpleado1 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        RolEmpleado2 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,8 +157,6 @@ public class CambioProductores extends javax.swing.JFrame {
 
         jLabel17.setText("5. Plot.");
 
-        jLabel18.setText("6. Ensamblador.");
-
         jLabel19.setText("Cantidad de Productores Intro");
 
         jLabel20.setText("Cantidad de Productores Inicios");
@@ -135,20 +167,111 @@ public class CambioProductores extends javax.swing.JFrame {
 
         jLabel23.setText("Cantidad de Productores de Cierre");
 
-        CantidadProductoresIntro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CantidadProductoresIntro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CantidadProductoresIntro.setText("2");
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel25.setText("4");
+        CantidadProductoresInicio.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CantidadProductoresInicio.setText("3");
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel26.setText("1");
+        CantidadProductoresCreditos.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CantidadProductoresCreditos.setText("1");
 
-        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel27.setText("1");
+        CantidadProductoresPlot.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CantidadProductoresPlot.setText("1");
 
-        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel28.setText("2");
+        CantidadProductoresCierre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        CantidadProductoresCierre.setText("2");
+
+        empleado2.setText("   ");
+        empleado2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado2ActionPerformed(evt);
+            }
+        });
+
+        empleado3.setText("   ");
+        empleado3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado3ActionPerformed(evt);
+            }
+        });
+
+        empleado.setText("   ");
+        empleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleadoActionPerformed(evt);
+            }
+        });
+
+        empleado5.setText("   ");
+        empleado5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado5ActionPerformed(evt);
+            }
+        });
+
+        empleado4.setText("   ");
+        empleado4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado4ActionPerformed(evt);
+            }
+        });
+
+        empleado6.setText("   ");
+        empleado6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado6ActionPerformed(evt);
+            }
+        });
+
+        empleado7.setText("   ");
+        empleado7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado7ActionPerformed(evt);
+            }
+        });
+
+        empleado8.setText("   ");
+        empleado8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado8ActionPerformed(evt);
+            }
+        });
+
+        empleado9.setText("   ");
+        empleado9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empleado9ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Enviar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Enviar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Envar");
+
+        jButton6.setText("Enviar");
+
+        RolEmpleado1.setText("Intro");
+
+        jLabel18.setText("Area");
+
+        RolEmpleado2.setText("Intro");
+
+        jLabel24.setText("Cantidad de emsambladores");
+
+        jLabel25.setText("1");
 
         javax.swing.GroupLayout CantidadIntroInterfazLayout = new javax.swing.GroupLayout(CantidadIntroInterfaz);
         CantidadIntroInterfaz.setLayout(CantidadIntroInterfazLayout);
@@ -157,77 +280,132 @@ public class CambioProductores extends javax.swing.JFrame {
             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addGap(412, 412, 412)
-                        .addComponent(jLabel1))
-                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel18)
-                            .addComponent(empleado1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2)))
-                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addGap(412, 412, 412)
+                                .addComponent(jLabel1))
                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                                 .addGap(43, 43, 43)
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel21)
+                                    .addComponent(jLabel22)
+                                    .addComponent(jLabel23)
+                                    .addComponent(jLabel19))
+                                .addGap(84, 84, 84)
+                                .addComponent(CantidadProductoresCierre)))
+                        .addGap(461, 461, 461))
+                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel18)
+                        .addGap(27, 27, 27)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jLabel15))
+                                .addGap(41, 41, 41))
+                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RolEmpleado1)
+                                            .addComponent(jLabel2)))
+                                    .addComponent(jLabel17)
+                                    .addComponent(empleado1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26)
                                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel2)
-                                                    .addComponent(jLabel12))
-                                                .addGap(26, 26, 26)
-                                                .addComponent(jLabel3))
-                                            .addComponent(jLabel19))
-                                        .addGap(35, 35, 35)
-                                        .addComponent(jLabel4)
-                                        .addGap(36, 36, 36)
-                                        .addComponent(jLabel5)
-                                        .addGap(37, 37, 37)
-                                        .addComponent(jLabel6)
-                                        .addGap(27, 27, 27)
-                                        .addComponent(jLabel7)
-                                        .addGap(34, 34, 34)
-                                        .addComponent(jLabel8)
-                                        .addGap(38, 38, 38)
-                                        .addComponent(jLabel9)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(jLabel10))
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel22))
-                                .addGap(48, 48, 48))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel23)
-                                .addGap(18, 18, 18)
-                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel28)
-                                        .addComponent(jLabel27))
-                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
+                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addComponent(empleado2)
+                                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(27, 27, 27)
+                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(empleado3)))
+                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                                .addComponent(jButton3)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton4)))
+                                        .addGap(33, 33, 33)
                                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel25)
-                                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(CantidadProductoresIntro))))
-                                .addGap(610, 610, 610)))
+                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                                .addComponent(jLabel5)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(empleado5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jButton5))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addComponent(RolEmpleado2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jLabel11))))
-                .addContainerGap(36, Short.MAX_VALUE))
+                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(empleado4))
+                                .addGap(88, 88, 88)
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(44, 44, 44)
+                                        .addComponent(jLabel8))
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addGap(35, 35, 35)
+                                        .addComponent(empleado6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(45, 45, 45)
+                                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addComponent(jLabel9)
+                                        .addGap(61, 61, 61)
+                                        .addComponent(jLabel10))
+                                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                        .addComponent(empleado7, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(empleado9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addComponent(jButton6)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CantidadProductoresPlot)
+                            .addComponent(CantidadProductoresInicio)
+                            .addComponent(CantidadProductoresIntro)
+                            .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                                .addComponent(CantidadProductoresCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(138, 138, 138)
+                                .addComponent(jLabel24)
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabel25)))
+                        .addGap(343, 343, 343)))
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(empleado8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
+                    .addComponent(jLabel11))
+                .addContainerGap())
         );
         CantidadIntroInterfazLayout.setVerticalGroup(
             CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(72, 72, 72)
+                .addGap(40, 40, 40)
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RolEmpleado1)
+                    .addComponent(jLabel18)
+                    .addComponent(RolEmpleado2))
+                .addGap(18, 18, 18)
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4)
@@ -251,38 +429,56 @@ public class CambioProductores extends javax.swing.JFrame {
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel17)
+                .addGap(42, 42, 42)
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(empleado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel18)
-                .addGap(17, 17, 17)
-                .addComponent(empleado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(CantidadProductoresIntro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(jLabel25))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(jLabel26))
+                    .addComponent(CantidadProductoresInicio))
+                .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CantidadProductoresCreditos, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel21)))
+                    .addGroup(CantidadIntroInterfazLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel25))))
                 .addGap(18, 18, 18)
                 .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(24, 24, 24))
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CantidadIntroInterfazLayout.createSequentialGroup()
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel22)
-                            .addComponent(jLabel27))
+                            .addComponent(CantidadProductoresPlot))
                         .addGap(18, 18, 18)
                         .addGroup(CantidadIntroInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel23)
-                            .addComponent(jLabel28))
-                        .addContainerGap())))
+                            .addComponent(CantidadProductoresCierre))))
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -312,27 +508,63 @@ public class CambioProductores extends javax.swing.JFrame {
         String ProductorIntro = "Intro";
         String ProductorInicio = "Inicio";
         String ProductorCreditos = "Creditos";
-        String ProductorcCierre = "Cierre";
+        String ProductorCierre = "Cierre";
         String ProductorPlot = "Plot";
-        
-        
-        
         
             try{
             String answer = empleado1.getText();
             int option = Integer.parseInt(answer);
-            if (option ==1){
-                if(Main.hiloRym1.VerTipo().equals("Intro")){
-                   JOptionPane.showMessageDialog(null,"Ya el productor ya es Productor de Intros no se puede cambiar");
-                }
-                else {
-                   Main.hiloRym1.CambiarTipo(ProductorIntro);
-                   Main.CantidadProductoresIntro++;
-                    
-                }
+            if (option == 1){
                 
+                Main.hiloRym1.CambiarTipo(ProductorIntro);
                 
-            } }catch (Exception e){
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym1.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            }
+            else if (option ==3 ){
+                Main.hiloRym1.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            }
+            else if (option ==4 ){
+                Main.hiloRym1.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            }
+            else if (option == 5 ){
+                Main.hiloRym1.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            } else {
+                throw new Exception ("No valido");
+            }
+            
+            RolEmpleado1.setText(Main.hiloRym1.VerTipo());
+            
+             }catch (Exception e){
                 JOptionPane.showMessageDialog(null,"No es una opcion valida");
                 empleado1.setText("");
     }
@@ -341,6 +573,114 @@ public class CambioProductores extends javax.swing.JFrame {
     private void empleado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_empleado1ActionPerformed
+
+    private void empleado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado2ActionPerformed
+
+    private void empleado3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado3ActionPerformed
+
+    private void empleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleadoActionPerformed
+
+    private void empleado5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado5ActionPerformed
+
+    private void empleado4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado4ActionPerformed
+
+    private void empleado6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado6ActionPerformed
+
+    private void empleado7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado7ActionPerformed
+
+    private void empleado8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado8ActionPerformed
+
+    private void empleado9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empleado9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empleado9ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        
+        String ProductorIntro = "Intro";
+        String ProductorInicio = "Inicio";
+        String ProductorCreditos = "Creditos";
+        String ProductorCierre = "Cierre";
+        String ProductorPlot = "Plot";
+        
+            try{
+            String answer = empleado2.getText();
+            int option = Integer.parseInt(answer);
+            if (option == 1){
+                
+                Main.hiloRym2.CambiarTipo(ProductorIntro);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+                
+            }
+            else if (option == 2 ){
+                
+                Main.hiloRym2.CambiarTipo(ProductorCreditos);
+                
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            }
+            else if (option ==3 ){
+                Main.hiloRym2.CambiarTipo(ProductorInicio);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            }
+            else if (option ==4 ){
+                Main.hiloRym2.CambiarTipo(ProductorCierre);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            }
+            else if (option == 5 ){
+                Main.hiloRym2.CambiarTipo(ProductorPlot);
+                   CantidadProductoresIntro.setText(Integer.toString(Main.CantidadProductoresIntro));
+                   CantidadProductoresInicio.setText(Integer.toString(Main.CantidadProductoresInicio));
+                   CantidadProductoresCreditos.setText(Integer.toString(Main.CantidadProductoresCreditos));
+                   CantidadProductoresCierre.setText(Integer.toString(Main.CantidadProductoresCierre));
+                   CantidadProductoresPlot.setText(Integer.toString(Main.CantidadProductoresplot));
+            } else {
+                throw new Exception ("No valido");
+            }
+            
+            RolEmpleado2.setText(Main.hiloRym2.VerTipo());
+            
+             }catch (Exception e){
+                JOptionPane.showMessageDialog(null,"No es una opcion valida");
+                empleado1.setText("");
+    }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -379,10 +719,29 @@ public class CambioProductores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CantidadIntroInterfaz;
+    private javax.swing.JLabel CantidadProductoresCierre;
+    private javax.swing.JLabel CantidadProductoresCreditos;
+    private javax.swing.JLabel CantidadProductoresInicio;
     private javax.swing.JLabel CantidadProductoresIntro;
+    private javax.swing.JLabel CantidadProductoresPlot;
+    private javax.swing.JLabel RolEmpleado1;
+    private javax.swing.JLabel RolEmpleado2;
+    private javax.swing.JTextField empleado;
     private javax.swing.JTextField empleado1;
+    private javax.swing.JTextField empleado2;
+    private javax.swing.JTextField empleado3;
+    private javax.swing.JTextField empleado4;
+    private javax.swing.JTextField empleado5;
+    private javax.swing.JTextField empleado6;
+    private javax.swing.JTextField empleado7;
+    private javax.swing.JTextField empleado8;
+    private javax.swing.JTextField empleado9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -399,10 +758,8 @@ public class CambioProductores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

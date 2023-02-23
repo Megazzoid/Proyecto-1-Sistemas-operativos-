@@ -59,7 +59,7 @@ public class Main {
     public static Productores_RickyMorty hiloRym8;
     public static Productores_RickyMorty hiloRym9;
     public static Productores_RickyMorty hiloRym10;
-    public static Emsamblador_RickMorty hiloRym11;
+
     public static ProjectManager_RickyMorty hiloRym12;
     public static Director_RickyMorty hiloRym13;
     public static int capituloslistosRym = 0;
@@ -68,11 +68,12 @@ public class Main {
     public static int remainingDays = TotalDays;
     public static int GastoRyM = 0;
     public static int seriesultimolote = 0;
-    public static int CantidadProductoresInicio = 4;
+    public static int CantidadProductoresInicio = 3;
     public static int CantidadProductoresCreditos = 1;
     public static int CantidadProductoresCierre = 2;
     public static int CantidadProductoresplot = 1;
     public static int CantidadProductoresIntro = 2;
+    public static int CantidadProductoresEmsamblador = 1;
     
                     
     public static void main(String[] args) {
@@ -100,9 +101,8 @@ public class Main {
         hiloRym6 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
         hiloRym7 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
         hiloRym8 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
-        hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Inicio");
+        hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Emsamblador");
         hiloRym10 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Plot");
-        hiloRym11 = new Emsamblador_RickMorty(semaforoEmsamblador);
         hiloRym12 = new ProjectManager_RickyMorty();
         hiloRym13 = new Director_RickyMorty();
         
@@ -132,7 +132,6 @@ public class Main {
         hiloRym8.start();
         hiloRym9.start();
         hiloRym10.start();
-        hiloRym11.start();
         hiloRym12.start();
         hiloRym13.start();
         
@@ -149,7 +148,6 @@ public class Main {
         hiloRym8.pausar();
         hiloRym9.pausar();
         hiloRym10.pausar();
-        hiloRym11.pausar();
         hiloRym12.pausar();
         hiloRym13.pausar();
         
@@ -166,7 +164,6 @@ public class Main {
         hiloRym8.reanudar();
         hiloRym9.reanudar();
         hiloRym10.reanudar();
-        hiloRym11.reanudar();
         hiloRym12.reanudar();
         hiloRym13.reanudar();
         

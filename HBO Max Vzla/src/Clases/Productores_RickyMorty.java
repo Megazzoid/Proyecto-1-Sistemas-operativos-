@@ -19,6 +19,7 @@ public class Productores_RickyMorty extends Thread {
     private NewJFrame newJFrame = NewJFrame.getInstance();
     int contador;
     private boolean pausar = false;
+    int capituloplot = 0;
    
 
     public Productores_RickyMorty(Semaphore espacioEnDrive, String tipoProductor) {
@@ -41,7 +42,159 @@ public class Productores_RickyMorty extends Thread {
    }
    
    public void CambiarTipo(String Tipo){
+       
+       if (tipoProductor == "Intro") {
+           if(Main.CantidadProductoresIntro>1){
+               Main.CantidadProductoresIntro--;
+           }
+           else{
+               if(Tipo == "Intro"){
+                  System.out.println("");
+               }
+               else{
+                 return;  
+               }
+               
+           }
+       
+        }else if(tipoProductor =="Inicio"){
+              if(Main.CantidadProductoresInicio>1){
+                   Main.CantidadProductoresInicio--;
+              }
+              else{
+                    if(Tipo == "Inicio"){
+                         System.out.println("");
+               }
+                     else{
+                         return;  
+               }
+               
+           
+           } 
+        }else if(tipoProductor =="Creditos"){
+            if(Main.CantidadProductoresCreditos>1){
+               Main.CantidadProductoresCreditos--;
+            }
+            else{
+               if(Tipo == "Creditos"){
+                  System.out.println("");
+               }
+               else{
+                 return;  
+               }
+           }
+        }
+        else if(tipoProductor == "Cierre") {
+            if(Main.CantidadProductoresCierre > 1){
+            Main.CantidadProductoresCierre--;
+            }
+            else{
+               if(Tipo == "Cierre"){
+                  System.out.println("");
+               }
+               else{
+                 return;  
+               }
+           }
+        }
+        else if(tipoProductor == "Plot"){
+            if (Main.CantidadProductoresplot >1){
+                Main.CantidadProductoresplot--;
+            }
+            else{
+               if(Tipo == "Plot"){
+                  System.out.println("");
+               }
+               else{
+                 return;  
+               }
+           }
+        }
+        else if(tipoProductor == "Emsamblador"){
+            if (Main.CantidadProductoresEmsamblador >1){
+                Main.CantidadProductoresplot--;
+            }
+            else{
+               if(Tipo == "Emsamblador"){
+                  System.out.println("");
+               }
+               else{
+                 return;  
+               }
+           }    
+       }
+       
        tipoProductor = Tipo;
+       
+       if (tipoProductor == "Intro") {
+           Main.CantidadProductoresIntro++;
+       }else if(tipoProductor =="Inicio"){
+           Main.CantidadProductoresInicio++;
+       }else if(tipoProductor =="Cierre"){
+           Main.CantidadProductoresCierre++;
+       }else if(tipoProductor =="Cirre"){
+           Main.CantidadProductoresCierre++;
+       }else if(tipoProductor =="Plot"){
+           Main.CantidadProductoresplot++;
+       }else if(tipoProductor =="Creditos"){
+           Main.CantidadProductoresCreditos++;
+       }
+       else if(tipoProductor =="Emsamblador"){
+           Main.CantidadProductoresEmsamblador++;
+                   
+       }
+       
+       
+       
+   }
+   
+   public void emsamblar(){
+       if (tipoProductor.equals("Emsamblador")) {
+            if(capituloplot>4){
+
+                if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
+                    Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54 && Main.semaforoPlotRickyMorty.availablePermits() <= 39 ){
+
+                try {
+                                Thread.sleep(2000);
+                                Main.semaforoInicioRickyMorty.release(2);
+                                Main.semaforoIntroRickYmorty.release(1);
+                                Main.semaforoCreditsRickyMorty.release(1);
+                                Main.semaforoCierreRickyMorty.release(1);
+                                Main.semaforoPlotRickyMorty.release(1);
+                                Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
+                                newJFrame.getCapituloPlotRyM(Integer.toString(Main.capitulosPlotRym));
+                                capituloplot = 0;
+
+                            } catch (InterruptedException ex) {
+                                java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }}       
+                else{
+                System.out.println("No se pudo producir");
+            }
+
+
+            }else{
+                if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
+                    Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54){
+
+                try {
+                                Thread.sleep(2000);
+                                Main.semaforoInicioRickyMorty.release(2);
+                                Main.semaforoIntroRickYmorty.release(1);
+                                Main.semaforoCreditsRickyMorty.release(1);
+                                Main.semaforoCierreRickyMorty.release(1);
+                                Main.capituloslistosRym = Main.capituloslistosRym + 1;
+                                capituloplot = capituloplot + 1; 
+                                newJFrame.getCapituloRyM(Integer.toString(Main.capituloslistosRym));
+                            } catch (InterruptedException ex) {
+                                java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                            }
+
+            }
+
+            }
+       }
    }
     
     public void producirIntroRyM(){
@@ -162,6 +315,7 @@ public class Productores_RickyMorty extends Thread {
             producirInicioRyM();
             producirCierreRyM();
             producirPlotRyM();
+            emsamblar();
                     }
            
         
