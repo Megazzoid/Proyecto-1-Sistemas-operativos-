@@ -31,7 +31,7 @@ public class Emsamblador_RickMorty extends Thread {
                 Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54 && Main.semaforoPlotRickyMorty.availablePermits() <= 39 ){
             
             try {
-                            Thread.sleep(5000);
+                            Thread.sleep(2000);
                             Main.semaforoInicioRickyMorty.release(2);
                             Main.semaforoIntroRickYmorty.release(1);
                             Main.semaforoCreditsRickyMorty.release(1);
@@ -39,6 +39,7 @@ public class Emsamblador_RickMorty extends Thread {
                             Main.semaforoPlotRickyMorty.release(1);
                             Main.capitulosPlotRym = Main.capitulosPlotRym + 1;
                             newJFrame.getCapituloPlotRyM(Integer.toString(Main.capitulosPlotRym));
+                            int capituloplot = 0;
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Productores_GOT.class.getName()).log(Level.SEVERE, null, ex);
                         }}       
@@ -52,7 +53,7 @@ public class Emsamblador_RickMorty extends Thread {
                 Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54){
             
             try {
-                            Thread.sleep(5000);
+                            Thread.sleep(2000);
                             Main.semaforoInicioRickyMorty.release(2);
                             Main.semaforoIntroRickYmorty.release(1);
                             Main.semaforoCreditsRickyMorty.release(1);

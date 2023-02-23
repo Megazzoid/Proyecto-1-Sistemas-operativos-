@@ -154,7 +154,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel8.setText("CAP. PLOT TWIST PRODUCIDOS");
 
-        jLabel9.setText("DÍAS QUE PARA ENTREGA");
+        jLabel9.setText("DÍAS PARA LA ENTREGA");
 
         jLabel10.setText("Que Hace ProjectManager");
 
