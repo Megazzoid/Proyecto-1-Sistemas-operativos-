@@ -5,7 +5,6 @@
  */
 package Interfaz;
 
-import Clases.Main;
 import Clases.Productores_GOT;
 import java.util.concurrent.Semaphore;
 import javax.swing.JTextField;
@@ -22,6 +21,10 @@ public class NewJFrame extends javax.swing.JFrame {
     public static int num_prod;
     public static int Productores;
     public static int num_prod2;
+    public static int num_prod3;
+    public static int num_prod4;
+    public static int num_prod5;
+    public static int num_ens;
     
     public static Semaphore semaforoMax = new Semaphore(200);
     public static Semaphore semaforoIntro = new Semaphore(30);
@@ -36,7 +39,6 @@ public class NewJFrame extends javax.swing.JFrame {
     public static Productores_GOT hilo4;
     public static Productores_GOT hilo5;
     public static Productores_GOT hilo6;
-     
     /**
      * Creates new form NewJFrame
      */
@@ -57,7 +59,7 @@ public class NewJFrame extends javax.swing.JFrame {
         return newJFrame;
     }
     
-    public synchronized void introDisp(String info){
+public synchronized void introDisp(String info){
         introDis.setText(info);
     }
     
@@ -65,6 +67,45 @@ public class NewJFrame extends javax.swing.JFrame {
         creditoDis.setText(info);
     }
     
+    public synchronized void iniDisp(String info){
+        iniDis.setText(info);
+    }
+    
+        public synchronized void cierreDisp(String info){
+        cierreDis.setText(info);
+    }
+        
+        public synchronized void plotDisp(String info){
+        plotDis.setText(info);
+    }
+        
+        public synchronized void capDisp(String info){
+        capListo.setText(info);
+    }
+
+ public void Productores(int productores){
+        this.num_prod = productores; 
+    }
+    
+    public void Productores2(int productores2){
+        this.num_prod2 = productores2; 
+    }
+    
+    public void Productores3(int productores3){
+        this.num_prod3 = productores3; 
+    }
+    
+    public void Productores4(int productores4){
+        this.num_prod4 = productores4; 
+    }
+    
+    public void Productores5(int productores5){
+        this.num_prod5 = productores5; 
+    }
+    
+    public void ProductoresEnsambladores(int ensa){
+        this.num_ens = ensa; 
+    }
    public synchronized void getintroDisponibleRym (String info){
        introDisponible.setText(info);
    }
@@ -119,30 +160,7 @@ public class NewJFrame extends javax.swing.JFrame {
     public synchronized void GananciaRyM(String info){
        GananciaRyM.setText(info);
    }
-    public void Productores(int productores){
-        this.num_prod = productores; 
-    }
-    
-    public void Productores2(int productores2){
-        this.num_prod2 = productores2; 
-    }
-    
-    public void Productores3(int productores3){
-        //this.num_prod3 = productores3; 
-    }
-    
-    public void Productores4(int productores4){
-        //this.num_prod4 = productores4; 
-    }
-    
-    public void Productores5(int productores5){
-        //this.num_prod5 = productores5; 
-    }
-    
-    public void ProductoresEnsambladores(int ensa){
-        //this.num_ens = ensa; 
-    }
-   
+  
        
     /**
      * This method is called from within the constructor to initialize the form.
@@ -579,6 +597,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         addIni.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addIni.setText("+");
+        addIni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addIniActionPerformed(evt);
+            }
+        });
         jPanel1.add(addIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 60, -1));
 
         delCierre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -587,10 +610,20 @@ public class NewJFrame extends javax.swing.JFrame {
 
         addCierre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addCierre.setText("+");
+        addCierre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCierreActionPerformed(evt);
+            }
+        });
         jPanel1.add(addCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 60, -1));
 
         addPlot.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addPlot.setText("+");
+        addPlot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlotActionPerformed(evt);
+            }
+        });
         jPanel1.add(addPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 60, -1));
 
         delPlot.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -627,6 +660,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         addEnsa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addEnsa.setText("+");
+        addEnsa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEnsaActionPerformed(evt);
+            }
+        });
         jPanel1.add(addEnsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 560, 60, -1));
 
         delEnsa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -735,25 +773,69 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void ComenzarRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComenzarRyMActionPerformed
         // TODO add your handling code here:
-        Main.Iniciar();
+        //Main.Iniciar();
         this.ComenzarRyM.setEnabled(false);
         this.PausarRyM.setEnabled(true);
     }//GEN-LAST:event_ComenzarRyMActionPerformed
 
     private void PausarRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PausarRyMActionPerformed
         // TODO add your handling code here:
-        Main.Pausar();
+        //Main.Pausar();
         this.PausarRyM.setEnabled(false);
         this.Reanudar.setEnabled(true);
     }//GEN-LAST:event_PausarRyMActionPerformed
 
     private void ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReanudarActionPerformed
         // TODO add your handling code here:
-        Main.Reanudar();
+        //Main.Reanudar();
         this.Reanudar.setEnabled(false);
         this.PausarRyM.setEnabled(true);
              
     }//GEN-LAST:event_ReanudarActionPerformed
+
+    private void addIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addIniActionPerformed
+         num_prod3++;
+        for (int i = 0; i < num_prod3; i++) {
+                String valor= prodIni.getText();
+                int val = Integer.parseInt(valor);
+                val++;
+                prodIni.setText(String.valueOf(val));
+                break;
+        }
+    }//GEN-LAST:event_addIniActionPerformed
+
+    private void addCierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCierreActionPerformed
+         num_prod4++;
+        for (int i = 0; i < num_prod4; i++) {
+                String valor= prodCierre.getText();
+                int val = Integer.parseInt(valor);
+                val++;
+                prodCierre.setText(String.valueOf(val));
+                break;
+        }
+    }//GEN-LAST:event_addCierreActionPerformed
+
+    private void addPlotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlotActionPerformed
+         num_prod5++;
+        for (int i = 0; i < num_prod5; i++) {
+                String valor= prodPlot.getText();
+                int val = Integer.parseInt(valor);
+                val++;
+                prodPlot.setText(String.valueOf(val));
+                break;
+        }
+    }//GEN-LAST:event_addPlotActionPerformed
+
+    private void addEnsaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsaActionPerformed
+        num_ens++;
+        for (int i = 0; i < num_ens; i++) {
+                String valor= ensa.getText();
+                int val = Integer.parseInt(valor);
+                val++;
+                ensa.setText(String.valueOf(val));
+                break;
+        }
+    }//GEN-LAST:event_addEnsaActionPerformed
 
     /**
      * @param args the command line arguments
