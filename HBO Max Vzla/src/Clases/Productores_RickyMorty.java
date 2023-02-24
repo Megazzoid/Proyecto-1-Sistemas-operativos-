@@ -148,14 +148,16 @@ public class Productores_RickyMorty extends Thread {
        
    }
    
+  
+   
    public void emsamblar(){
        if (tipoProductor.equals("Ensamblador")) {
-            if(capituloplot>4){
-
-                if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
-                    Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54 && Main.semaforoPlotRickyMorty.availablePermits() <= 39 ){
-
-                try {
+           if(capituloplot>4){
+                
+                if(Main.semaforoInicioRickyMorty.availablePermits() <= 48 && Main.semaforoIntroRickYmorty.availablePermits() <= 29  && Main.semaforoCierreRickyMorty.availablePermits()<= 54
+                       && Main.semaforoCreditsRickyMorty.availablePermits() <= 21  && Main.semaforoPlotRickyMorty.availablePermits() <= 39 ) {
+              
+                                try {
                                 Thread.sleep(2000);
                                 Main.semaforoInicioRickyMorty.release(2);
                                 Main.semaforoIntroRickYmorty.release(1);
@@ -168,17 +170,16 @@ public class Productores_RickyMorty extends Thread {
 
                             } catch (InterruptedException ex) {
                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                            }}       
-                else{
-                System.out.println("No se pudo producir");
+                            }       
+               
             }
+            }
+           else{
+               
+               if(Main.semaforoInicioRickyMorty.availablePermits()<= 48 && Main.semaforoIntroRickYmorty.availablePermits() <= 29  && Main.semaforoCierreRickyMorty.availablePermits()<= 54
+                       && Main.semaforoCreditsRickyMorty.availablePermits() <= 21) {
 
-
-            }else{
-                if(Main.semaforoIntroRickYmorty.availablePermits()<= 29 && Main.semaforoCreditsRickyMorty.availablePermits() <= 21 &&
-                    Main.semaforoInicio.availablePermits() <= 48 && Main.semaforoCierreRickyMorty.availablePermits()<= 54){
-
-                try {
+                                 try {
                                 Thread.sleep(2000);
                                 Main.semaforoInicioRickyMorty.release(2);
                                 Main.semaforoIntroRickYmorty.release(1);
@@ -191,11 +192,16 @@ public class Productores_RickyMorty extends Thread {
                                 java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
 
+            
+               }
             }
-
-            }
+            
        }
-   }
+       }
+
+       
+            
+   
     
     public void producirIntroRyM(){
         if (tipoProductor.equals("Intro")) {
@@ -209,6 +215,8 @@ public class Productores_RickyMorty extends Thread {
                             contador = 30 - Main.semaforoIntroRickYmorty.availablePermits();
                             
                             newJFrame.getintroDisponibleRym(Integer.toString(contador));
+    
+                            
                             } catch (InterruptedException ex) {
                                  java.util.logging.Logger.getLogger(Productores_GOT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                             }
@@ -303,6 +311,7 @@ public class Productores_RickyMorty extends Thread {
     
     @Override
     public void run() {
+        
         while(true){
             synchronized(this){
             while(pausar==true){
@@ -310,12 +319,13 @@ public class Productores_RickyMorty extends Thread {
                 }    
             }
             
+            emsamblar();
             producirIntroRyM();
             producirCreditosRyM();
             producirInicioRyM();
             producirCierreRyM();
             producirPlotRyM();
-            emsamblar();
+            
                     }
            
         

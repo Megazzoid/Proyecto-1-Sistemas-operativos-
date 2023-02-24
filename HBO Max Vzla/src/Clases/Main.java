@@ -97,9 +97,12 @@ public class Main {
         hiloRym7 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
         hiloRym8 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Cierre");
         hiloRym9 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Ensamblador");
+ 
+        
         hiloRym10 = new Productores_RickyMorty(semaforoIntroRickYmorty, "Plot");
         hiloRym12 = new ProjectManager_RickyMorty();
         hiloRym13 = new Director_RickyMorty();
+    
         
        
         
