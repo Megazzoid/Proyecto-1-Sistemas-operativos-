@@ -161,6 +161,11 @@ public synchronized void introDisp(String info){
     public synchronized void GananciaRyM(String info){
        GananciaRyM.setText(info);
    }
+    public synchronized void AudenciaPorLote(String info){
+       AudenciaPorLote.setText(info);
+   }
+    
+    
   
        
     /**
@@ -259,6 +264,8 @@ public synchronized void introDisp(String info){
         jButton2 = new javax.swing.JButton();
         PausarRyM = new javax.swing.JButton();
         Reanudar = new javax.swing.JButton();
+        jLabel39 = new javax.swing.JLabel();
+        AudenciaPorLote = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
 
@@ -386,7 +393,7 @@ public synchronized void introDisp(String info){
 
         SalarioMensual.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         SalarioMensual.setText("Waiting");
-        jPanel1.add(SalarioMensual, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 900, -1, -1));
+        jPanel1.add(SalarioMensual, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 880, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel2.setText("Intro:");
@@ -704,6 +711,14 @@ public synchronized void introDisp(String info){
         });
         jPanel1.add(Reanudar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 140, -1, -1));
 
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel39.setText("Audiencia por lote");
+        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 930, -1, -1));
+
+        AudenciaPorLote.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AudenciaPorLote.setText("Waiting");
+        jPanel1.add(AudenciaPorLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 930, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -855,6 +870,7 @@ public synchronized void introDisp(String info){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AudenciaPorLote;
     private javax.swing.JTextField CapHBO;
     private javax.swing.JLabel CapituloPlotRyM;
     private javax.swing.JLabel CapituloRyM;
@@ -927,6 +943,7 @@ public synchronized void introDisp(String info){
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

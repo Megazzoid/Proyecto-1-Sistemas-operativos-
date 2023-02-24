@@ -65,7 +65,9 @@ public class Director_RickyMorty extends Thread {
                  
                  newJFrame.LoteRyM(Integer.toString(Main.seriesultimolote));
                  
+                 
                  audencia = Main.seriesultimolote * 1000000;
+                 newJFrame.AudenciaPorLote(Integer.toString(audencia));
                  ganancia = audencia / 150000;
                  ganancia = ganancia * 100000;
                  
