@@ -83,17 +83,44 @@ public synchronized void introDisp(String info){
         public synchronized void capDisp(String info){
         capListo.setText(info);
     }
+        public synchronized void capPlot(String info){
+        capPlot.setText(info);
+    }
 
         public synchronized void TotalDias(String info){
-            DiasGOT.setText(info);
+            sueldoGeneral.setText(info);
         }
         
         public synchronized void pjvago(String info){
             pjGOT.setText(info);
         }
         
+        public synchronized void directorvago(String info){
+            DirectorGOT.setText(info);
+        }
+        
         public synchronized void DirectorGOT(String info){
             salarioDirector.setText(info);
+        }
+        
+         public synchronized void sueldoGOT(String info){
+            sueldoGOT.setText(info);
+        }
+        
+        public synchronized void Audiencia(String info){
+            Audiencia.setText(info);
+        }
+        
+         public synchronized void Ganancias(String info){
+            Ganancias.setText(info);
+        }
+         
+          public synchronized void DiasGOT(String info){
+            DiasGOT.setText(info);
+        }
+          
+          public synchronized void sueldoGeneral(String info){
+            sueldoGeneral.setText(info);
         }
 
  public void Productores(int productores){
@@ -253,7 +280,7 @@ public synchronized void introDisp(String info){
         jLabel33 = new javax.swing.JLabel();
         ensa = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        DiasGOT = new javax.swing.JTextField();
+        sueldoGeneral = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         salarioDirector = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
@@ -280,6 +307,12 @@ public synchronized void introDisp(String info){
         capListo = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         capPlot = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        DiasGOT = new javax.swing.JTextField();
+        jLabel42 = new javax.swing.JLabel();
+        Ganancias = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        Audiencia = new javax.swing.JTextField();
 
         jInternalFrame1.setVisible(true);
 
@@ -569,13 +602,13 @@ public synchronized void introDisp(String info){
         jPanel1.add(ensa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, -1, -1));
 
         jLabel34.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        jLabel34.setText("Dias restantes:");
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 820, -1, 38));
+        jLabel34.setText("Sueldo general:");
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 830, -1, 38));
 
-        DiasGOT.setEditable(false);
-        DiasGOT.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        DiasGOT.setText("0");
-        jPanel1.add(DiasGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 830, 90, -1));
+        sueldoGeneral.setEditable(false);
+        sueldoGeneral.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        sueldoGeneral.setText("0");
+        jPanel1.add(sueldoGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 830, 90, -1));
 
         jLabel35.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel35.setText("Estado:");
@@ -766,6 +799,33 @@ public synchronized void introDisp(String info){
         capPlot.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         capPlot.setText("0");
         jPanel1.add(capPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 620, -1, -1));
+
+        jLabel38.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel38.setText("Dias restantes:");
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 820, -1, 38));
+
+        DiasGOT.setEditable(false);
+        DiasGOT.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        DiasGOT.setText("0");
+        jPanel1.add(DiasGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 830, 90, -1));
+
+        jLabel42.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel42.setText("Ganancias:");
+        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 890, -1, 38));
+
+        Ganancias.setEditable(false);
+        Ganancias.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ganancias.setText("0");
+        jPanel1.add(Ganancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 890, 90, -1));
+
+        jLabel43.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel43.setText("Audiencia:");
+        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 880, -1, 38));
+
+        Audiencia.setEditable(false);
+        Audiencia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Audiencia.setText("0");
+        jPanel1.add(Audiencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 890, 90, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -992,6 +1052,7 @@ public synchronized void introDisp(String info){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AudenciaPorLote;
+    private javax.swing.JTextField Audiencia;
     private javax.swing.JLabel CapituloPlotRyM;
     private javax.swing.JLabel CapituloRyM;
     private javax.swing.JButton ComenzarRyM;
@@ -1002,6 +1063,7 @@ public synchronized void introDisp(String info){
     private javax.swing.JLabel DirectorRyM;
     private javax.swing.JLabel FinalesRyM;
     private javax.swing.JLabel GananciaRyM;
+    private javax.swing.JTextField Ganancias;
     private javax.swing.JLabel InicioRyM;
     private javax.swing.JLabel LoteRyM;
     private javax.swing.JButton PausarRyM;
@@ -1063,10 +1125,13 @@ public synchronized void introDisp(String info){
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1082,6 +1147,7 @@ public synchronized void introDisp(String info){
     private javax.swing.JTextField prodPlot;
     private javax.swing.JTextField salarioDirector;
     private javax.swing.JTextField sueldoGOT;
+    private javax.swing.JTextField sueldoGeneral;
     // End of variables declaration//GEN-END:variables
 
     /**
