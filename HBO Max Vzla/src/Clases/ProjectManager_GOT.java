@@ -16,8 +16,8 @@ import java.util.logging.Logger;
 public class ProjectManager_GOT extends Thread{
     
     private NewJFrame newJFrame = NewJFrame.getInstance();
-    int salario = 7*24;
-    private boolean watchea =false;
+    int salario = 7 * 30;
+    boolean watchea =false;
    
     @Override
     public void run(){
@@ -32,12 +32,11 @@ public class ProjectManager_GOT extends Thread{
                     
                     Thread.sleep(126);
                     Main.Dias--;
-                    newJFrame.TotalDias(Integer.toString(Main.Dias));
+                    newJFrame.DiasGOT(Integer.toString(Main.Dias));
                     Main.RickMorty.release();
                     Main.sprint.release();
-                   
-                }
-                      for(int i = 0; i < 7; i++){
+                    
+                    for(int i = 0; i < 7; i++){
                           
                       watchea = true;
                       Thread.sleep(34);
@@ -46,6 +45,9 @@ public class ProjectManager_GOT extends Thread{
                       Thread.sleep(34);
                       newJFrame.pjvago("Haciendo Spring Reviews");
                 }
+                   
+                } 
+                      
             } catch (InterruptedException ex) {
                 Logger.getLogger(ProjectManager_GOT.class.getName()).log(Level.SEVERE, null, ex);
             }
