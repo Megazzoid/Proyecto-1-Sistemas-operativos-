@@ -84,6 +84,18 @@ public synchronized void introDisp(String info){
         capListo.setText(info);
     }
 
+        public synchronized void TotalDias(String info){
+            DiasGOT.setText(info);
+        }
+        
+        public synchronized void pjvago(String info){
+            pjGOT.setText(info);
+        }
+        
+        public synchronized void DirectorGOT(String info){
+            salarioDirector.setText(info);
+        }
+
  public void Productores(int productores){
         this.num_prod = productores; 
     }
@@ -241,9 +253,9 @@ public synchronized void introDisp(String info){
         jLabel33 = new javax.swing.JLabel();
         ensa = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        capListo = new javax.swing.JTextField();
+        DiasGOT = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        gastoMen = new javax.swing.JTextField();
+        salarioDirector = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         pjGOT = new javax.swing.JTextField();
         addCred = new javax.swing.JButton();
@@ -256,8 +268,6 @@ public synchronized void introDisp(String info){
         delPlot = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
         DirectorGOT = new javax.swing.JTextField();
-        jLabel38 = new javax.swing.JLabel();
-        CapHBO = new javax.swing.JTextField();
         addEnsa = new javax.swing.JButton();
         delEnsa = new javax.swing.JButton();
         ComenzarRyM = new javax.swing.JButton();
@@ -266,6 +276,10 @@ public synchronized void introDisp(String info){
         Reanudar = new javax.swing.JButton();
         jLabel39 = new javax.swing.JLabel();
         AudenciaPorLote = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        capListo = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        capPlot = new javax.swing.JTextField();
 
         jInternalFrame1.setVisible(true);
 
@@ -454,6 +468,11 @@ public synchronized void introDisp(String info){
 
         delIntro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         delIntro.setText("-");
+        delIntro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delIntroActionPerformed(evt);
+            }
+        });
         jPanel1.add(delIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 60, -1));
 
         addIntro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -492,22 +511,22 @@ public synchronized void introDisp(String info){
         introDis.setEditable(false);
         introDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         introDis.setText("0");
-        jPanel1.add(introDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, -1, -1));
+        jPanel1.add(introDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 100, -1));
 
         creditoDis.setEditable(false);
         creditoDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         creditoDis.setText("0");
-        jPanel1.add(creditoDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 290, -1, -1));
+        jPanel1.add(creditoDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 290, 90, -1));
 
         iniDis.setEditable(false);
         iniDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         iniDis.setText("0");
-        jPanel1.add(iniDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, -1, -1));
+        jPanel1.add(iniDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 100, -1));
 
         cierreDis.setEditable(false);
         cierreDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cierreDis.setText("0");
-        jPanel1.add(cierreDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, -1, -1));
+        jPanel1.add(cierreDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 90, -1));
 
         sueldoGOT.setEditable(false);
         sueldoGOT.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -517,7 +536,7 @@ public synchronized void introDisp(String info){
                 sueldoGOTActionPerformed(evt);
             }
         });
-        jPanel1.add(sueldoGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 780, -1, -1));
+        jPanel1.add(sueldoGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 780, 120, -1));
 
         jLabel29.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel29.setText("Productores");
@@ -530,7 +549,7 @@ public synchronized void introDisp(String info){
         plotDis.setEditable(false);
         plotDis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         plotDis.setText("0");
-        jPanel1.add(plotDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, -1, -1));
+        jPanel1.add(plotDis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 90, -1));
 
         jLabel31.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel31.setText("Ensambladores");
@@ -550,27 +569,27 @@ public synchronized void introDisp(String info){
         jPanel1.add(ensa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, -1, -1));
 
         jLabel34.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        jLabel34.setText("Gasto mensual:");
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 820, -1, 38));
+        jLabel34.setText("Dias restantes:");
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 820, -1, 38));
 
-        capListo.setEditable(false);
-        capListo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        capListo.setText("0");
-        jPanel1.add(capListo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 610, -1, -1));
+        DiasGOT.setEditable(false);
+        DiasGOT.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        DiasGOT.setText("0");
+        jPanel1.add(DiasGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 830, 90, -1));
 
         jLabel35.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel35.setText("Estado:");
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 720, -1, 38));
 
-        gastoMen.setEditable(false);
-        gastoMen.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        gastoMen.setText("0");
-        gastoMen.addActionListener(new java.awt.event.ActionListener() {
+        salarioDirector.setEditable(false);
+        salarioDirector.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        salarioDirector.setText("0");
+        salarioDirector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gastoMenActionPerformed(evt);
+                salarioDirectorActionPerformed(evt);
             }
         });
-        jPanel1.add(gastoMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 830, -1, -1));
+        jPanel1.add(salarioDirector, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 780, 100, -1));
 
         jLabel36.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel36.setText("Estado:");
@@ -584,7 +603,7 @@ public synchronized void introDisp(String info){
                 pjGOTActionPerformed(evt);
             }
         });
-        jPanel1.add(pjGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 720, -1, -1));
+        jPanel1.add(pjGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 720, 210, -1));
 
         addCred.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addCred.setText("+");
@@ -597,10 +616,20 @@ public synchronized void introDisp(String info){
 
         delCred.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         delCred.setText("-");
+        delCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delCredActionPerformed(evt);
+            }
+        });
         jPanel1.add(delCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 60, -1));
 
         delIni.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         delIni.setText("-");
+        delIni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delIniActionPerformed(evt);
+            }
+        });
         jPanel1.add(delIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 60, -1));
 
         addIni.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -614,6 +643,11 @@ public synchronized void introDisp(String info){
 
         delCierre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         delCierre.setText("-");
+        delCierre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delCierreActionPerformed(evt);
+            }
+        });
         jPanel1.add(delCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 60, -1));
 
         addCierre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -636,11 +670,16 @@ public synchronized void introDisp(String info){
 
         delPlot.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         delPlot.setText("-");
+        delPlot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delPlotActionPerformed(evt);
+            }
+        });
         jPanel1.add(delPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 60, -1));
 
         jLabel37.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel37.setText("Capitulos generados:");
-        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, -1, 38));
+        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, -1, 38));
 
         DirectorGOT.setEditable(false);
         DirectorGOT.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -650,21 +689,7 @@ public synchronized void introDisp(String info){
                 DirectorGOTActionPerformed(evt);
             }
         });
-        jPanel1.add(DirectorGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 720, -1, -1));
-
-        jLabel38.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        jLabel38.setText("Capitulos entregados:");
-        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 770, -1, 38));
-
-        CapHBO.setEditable(false);
-        CapHBO.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        CapHBO.setText("0");
-        CapHBO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CapHBOActionPerformed(evt);
-            }
-        });
-        jPanel1.add(CapHBO, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 770, -1, -1));
+        jPanel1.add(DirectorGOT, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 720, 180, -1));
 
         addEnsa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addEnsa.setText("+");
@@ -677,6 +702,11 @@ public synchronized void introDisp(String info){
 
         delEnsa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         delEnsa.setText("-");
+        delEnsa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delEnsaActionPerformed(evt);
+            }
+        });
         jPanel1.add(delEnsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 560, 60, -1));
 
         ComenzarRyM.setText("Iniciar");
@@ -719,6 +749,24 @@ public synchronized void introDisp(String info){
         AudenciaPorLote.setText("Waiting");
         jPanel1.add(AudenciaPorLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 930, -1, -1));
 
+        jLabel40.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel40.setText("Capitulos generados:");
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, -1, 38));
+
+        capListo.setEditable(false);
+        capListo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        capListo.setText("0");
+        jPanel1.add(capListo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 620, -1, -1));
+
+        jLabel41.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel41.setText("Sueldo:");
+        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 780, -1, 38));
+
+        capPlot.setEditable(false);
+        capPlot.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        capPlot.setText("0");
+        jPanel1.add(capPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 620, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -741,9 +789,9 @@ public synchronized void introDisp(String info){
         // TODO add your handling code here:
     }//GEN-LAST:event_sueldoGOTActionPerformed
 
-    private void gastoMenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gastoMenActionPerformed
+    private void salarioDirectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salarioDirectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_gastoMenActionPerformed
+    }//GEN-LAST:event_salarioDirectorActionPerformed
 
     private void pjGOTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pjGOTActionPerformed
         // TODO add your handling code here:
@@ -752,10 +800,6 @@ public synchronized void introDisp(String info){
     private void DirectorGOTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirectorGOTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DirectorGOTActionPerformed
-
-    private void CapHBOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CapHBOActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CapHBOActionPerformed
 
     private void addIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addIntroActionPerformed
 
@@ -853,13 +897,90 @@ public synchronized void introDisp(String info){
         }
     }//GEN-LAST:event_addEnsaActionPerformed
 
+    private void delIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delIntroActionPerformed
+         for (int i = num_prod ; i > 0; i--) {
+            if (num_prod != 0) {
+                String valor = prodIntro.getText();
+                int val = Integer.parseInt(valor);
+                val--;
+                prodIntro.setText(String.valueOf(val));
+                num_prod--;
+                break;
+            }
+        }
+    }//GEN-LAST:event_delIntroActionPerformed
+
+    private void delCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delCredActionPerformed
+        for (int i = num_prod2 ; i > 0; i--) {
+            if (num_prod2 != 0) {
+                String valor = prodCred.getText();
+                int val = Integer.parseInt(valor);
+                val--;
+                prodCred.setText(String.valueOf(val));
+                num_prod2--;
+                break;
+            }
+        }
+    }//GEN-LAST:event_delCredActionPerformed
+
+    private void delIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delIniActionPerformed
+         for (int i = num_prod3 ; i > 0; i--) {
+            if (num_prod3 != 0) {
+                String valor = prodIni.getText();
+                int val = Integer.parseInt(valor);
+                val--;
+                prodIni.setText(String.valueOf(val));
+                num_prod3--;
+                break;
+            }
+        }
+    }//GEN-LAST:event_delIniActionPerformed
+
+    private void delCierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delCierreActionPerformed
+        for (int i = num_prod4 ; i > 0; i--) {
+            if (num_prod4 != 0) {
+                String valor = prodCierre.getText();
+                int val = Integer.parseInt(valor);
+                val--;
+                prodCierre.setText(String.valueOf(val));
+                num_prod4--;
+                break;
+            }
+        }
+    }//GEN-LAST:event_delCierreActionPerformed
+
+    private void delPlotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delPlotActionPerformed
+        for (int i = num_prod5 ; i > 0; i--) {
+            if (num_prod5 != 0) {
+                String valor = prodPlot.getText();
+                int val = Integer.parseInt(valor);
+                val--;
+                prodPlot.setText(String.valueOf(val));
+                num_prod5--;
+                break;
+            }
+        }
+    }//GEN-LAST:event_delPlotActionPerformed
+
+    private void delEnsaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delEnsaActionPerformed
+        for (int i = num_ens ; i > 0; i--) {
+            if (num_ens != 0) {
+                String valor = ensa.getText();
+                int val = Integer.parseInt(valor);
+                val--;
+                ensa.setText(String.valueOf(val));
+                num_ens--;
+                break;
+            }
+        }
+    }//GEN-LAST:event_delEnsaActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         
-        hilo1.Productores(Productores);
-        hilo1.start();
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -871,12 +992,12 @@ public synchronized void introDisp(String info){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AudenciaPorLote;
-    private javax.swing.JTextField CapHBO;
     private javax.swing.JLabel CapituloPlotRyM;
     private javax.swing.JLabel CapituloRyM;
     private javax.swing.JButton ComenzarRyM;
     private javax.swing.JLabel CreditosRyM;
     private javax.swing.JLabel DiasFaltantesRyM;
+    private javax.swing.JTextField DiasGOT;
     private javax.swing.JTextField DirectorGOT;
     private javax.swing.JLabel DirectorRyM;
     private javax.swing.JLabel FinalesRyM;
@@ -896,6 +1017,7 @@ public synchronized void introDisp(String info){
     private javax.swing.JButton addIntro;
     private javax.swing.JButton addPlot;
     private javax.swing.JTextField capListo;
+    private javax.swing.JTextField capPlot;
     private javax.swing.JTextField cierreDis;
     private javax.swing.JTextField creditoDis;
     private javax.swing.JButton delCierre;
@@ -905,7 +1027,6 @@ public synchronized void introDisp(String info){
     private javax.swing.JButton delIntro;
     private javax.swing.JButton delPlot;
     private javax.swing.JTextField ensa;
-    private javax.swing.JTextField gastoMen;
     private javax.swing.JTextField iniDis;
     private javax.swing.JTextField introDis;
     private javax.swing.JLabel introDisponible;
@@ -942,9 +1063,10 @@ public synchronized void introDisp(String info){
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -958,6 +1080,7 @@ public synchronized void introDisp(String info){
     private javax.swing.JTextField prodIni;
     private javax.swing.JTextField prodIntro;
     private javax.swing.JTextField prodPlot;
+    private javax.swing.JTextField salarioDirector;
     private javax.swing.JTextField sueldoGOT;
     // End of variables declaration//GEN-END:variables
 
