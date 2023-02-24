@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import Clases.Main;
 import Clases.Productores_GOT;
 import java.util.concurrent.Semaphore;
 import javax.swing.JTextField;
@@ -321,7 +322,7 @@ public synchronized void introDisp(String info){
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 790, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel13.setText("Gasto Salario Mensual");
+        jLabel13.setText("Gasto por lote");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 880, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -329,7 +330,7 @@ public synchronized void introDisp(String info){
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel15.setText("Ganancia ultimo mes ");
+        jLabel15.setText("Ganancia por lote ");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 730, -1, -1));
 
         introDisponible.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -773,21 +774,21 @@ public synchronized void introDisp(String info){
 
     private void ComenzarRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComenzarRyMActionPerformed
         // TODO add your handling code here:
-        //Main.Iniciar();
+        Main.Iniciar();
         this.ComenzarRyM.setEnabled(false);
         this.PausarRyM.setEnabled(true);
     }//GEN-LAST:event_ComenzarRyMActionPerformed
 
     private void PausarRyMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PausarRyMActionPerformed
         // TODO add your handling code here:
-        //Main.Pausar();
+        Main.Pausar();
         this.PausarRyM.setEnabled(false);
         this.Reanudar.setEnabled(true);
     }//GEN-LAST:event_PausarRyMActionPerformed
 
     private void ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReanudarActionPerformed
         // TODO add your handling code here:
-        //Main.Reanudar();
+        Main.Reanudar();
         this.Reanudar.setEnabled(false);
         this.PausarRyM.setEnabled(true);
              
