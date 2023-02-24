@@ -34,7 +34,11 @@ public class Main {
     public static Director_GOT hilo8;
     
     public static int Dias = 30;
-    public static int salarioDirector = 3000;  
+    public static int salarioDirector = 3000; 
+    public static int audienciaGOT = 0;
+    public static int capPlot = 0;
+    public static int capNormal = 0;
+    public static int gastogeneral= 0;
     
     // el semaforo de rick y morty
     
@@ -122,6 +126,7 @@ public class Main {
         hilo6.start();
         hilo7.start();
         hilo8.start();
+        
         
        
         
