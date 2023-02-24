@@ -22,6 +22,7 @@ public class Main {
     public static Semaphore semaforoCierra = new Semaphore(55);
     public static Semaphore semaforoGiro = new Semaphore(40);
     public static Semaphore RickMorty = new Semaphore (1); 
+    public static Semaphore sprint = new Semaphore(1);
     
     public static Productores_GOT hilo1;
     public static Productores_GOT hilo2;
@@ -29,7 +30,11 @@ public class Main {
     public static Productores_GOT hilo4;
     public static Productores_GOT hilo5;
     public static Productores_GOT hilo6;
+    public static ProjectManager_GOT hilo7;
+    public static Director_GOT hilo8;
     
+    public static int Dias = 30;
+    public static int salarioDirector = 3000;  
     
     // el semaforo de rick y morty
     
@@ -79,6 +84,8 @@ public class Main {
         hilo4 = new Productores_GOT(semaforoMax, "cierre");
         hilo5 = new Productores_GOT(semaforoMax, "giro chido");
         hilo6 = new Productores_GOT(semaforoMax, "giro chido");
+        hilo7 = new ProjectManager_GOT();
+        hilo8 = new Director_GOT();
         
         hilo1.Productores(3);
         hilo2.Productores2(2);
@@ -113,6 +120,8 @@ public class Main {
         hilo4.start();
         hilo5.start();
         hilo6.start();
+        hilo7.start();
+        hilo8.start();
         
        
         
